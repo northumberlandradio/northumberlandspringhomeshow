@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vendor Booking · Northumberland Home, Garden &amp; Leisure Show 2027</title>
+<meta name="description" content="Renew your booth, find your spot on the 3D floor plan and get into the 2027 Guide Book. Northumberland Home, Garden &amp; Leisure Show, April 9 to 11, 2027, Cobourg Community Centre.">
+<meta property="og:title" content="Northumberland Home, Garden &amp; Leisure Show 2027: Vendor Booking">
+<meta property="og:description" content="April 9 to 11, 2027 at the Cobourg Community Centre. Renew your booth and join the 2027 Guide Book.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0f2552">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Instrument+Sans:wght@400..700&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+/* Layout: show-poster navy hero (tall thin date numerals + condensed title, after the 2026 banner),
+   then flat white bands: facts, 3D floor plan, flip-through guide book on navy, booking steps + form. */
+:root{
+  --bg:#f2f4f8; --surface:#ffffff; --ink:#0d1a36; --muted:#56637f; --line:#dbe1ec;
+  --navy:#14306a; --navy-2:#0f2552; --on-navy:#ffffff; --on-navy-muted:rgba(255,255,255,.72);
+  --leaf:#1f8a4c; --leaf-ink:#ffffff; --sun:#ffc83d; --sun-ink:#1d1600; --alert:#c43d24; --alert-bg:#fff1ec;
+  --scene-bg:#e5eaf2; --shadow:rgba(13,26,54,.16);
+  --st-open:#8cc865; --st-hold:#f2c94c; --st-booked:#9eadb7; --st-ink:#0d1a36; --tulip:#e0507a;
+  --f-display:"Archivo","Arial Narrow","Helvetica Neue",Arial,sans-serif;
+  --f-body:"Instrument Sans","Segoe UI",system-ui,-apple-system,sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  --r:14px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0a1124; --surface:#111b34; --ink:#e8edf8; --muted:#9eabc6; --line:#24314f;
+  --navy:#132a5e; --navy-2:#0c1c42; --on-navy:#ffffff; --on-navy-muted:rgba(255,255,255,.72);
+  --leaf:#3dbb73; --leaf-ink:#03170b; --sun:#ffcf55; --sun-ink:#1d1600; --alert:#ff8466; --alert-bg:#2a1610;
+  --scene-bg:#0f1932; --shadow:rgba(0,0,0,.5); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0a1124; --surface:#111b34; --ink:#e8edf8; --muted:#9eabc6; --line:#24314f;
+  --navy:#132a5e; --navy-2:#0c1c42; --on-navy:#ffffff; --on-navy-muted:rgba(255,255,255,.72);
+  --leaf:#3dbb73; --leaf-ink:#03170b; --sun:#ffcf55; --sun-ink:#1d1600; --alert:#ff8466; --alert-bg:#2a1610;
+  --scene-bg:#0f1932; --shadow:rgba(0,0,0,.5); color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--f-body);padding-bottom:env(safe-area-inset-bottom,0px);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--navy-2)}
+img{max-width:100%}
+[hidden]{display:none!important}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{margin:0;text-wrap:balance}
+p{margin:0}
+a{color:var(--leaf)}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:4px}
+.eyebrow{font-family:var(--f-mono);font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.muted{color:var(--muted);font-size:14.5px}
+.disp{font-family:var(--f-display);font-stretch:72%;font-weight:800;letter-spacing:-.01em;line-height:.95;text-transform:uppercase}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:700 15px/1 var(--f-body);padding:15px 22px;border-radius:999px;border:2px solid var(--leaf);background:var(--leaf);color:var(--leaf-ink);cursor:pointer;text-decoration:none;transition:transform .15s, filter .15s}
+.btn:hover{filter:brightness(1.06);transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--leaf)}
+.btn.sun{background:var(--sun);border-color:var(--sun);color:var(--sun-ink)}
+.btn.line-light{background:transparent;border-color:rgba(255,255,255,.45);color:var(--on-navy)}
+.btn.sm{padding:10px 16px;font-size:14px}
+.btn[aria-disabled="true"]{opacity:.55;cursor:not-allowed;transform:none}
+
+/* Nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--navy-2);color:var(--on-navy);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav-in{display:flex;align-items:center;gap:20px;min-height:64px}
+.brand{display:flex;align-items:baseline;gap:10px;color:inherit;text-decoration:none;min-width:0}
+.brand b{font-family:var(--f-display);font-stretch:70%;font-weight:800;font-size:22px;letter-spacing:.01em;text-transform:uppercase;white-space:nowrap}
+.brand span{font-family:var(--f-mono);font-size:12px;color:var(--sun);white-space:nowrap}
+.links{display:flex;gap:4px;margin-left:auto}
+.links a{color:var(--on-navy-muted);text-decoration:none;font-weight:600;font-size:14.5px;padding:8px 12px;border-radius:999px}
+.links a:hover{color:var(--on-navy);background:rgba(255,255,255,.08)}
+.nav .btn{margin-left:4px;white-space:nowrap}
+
+/* Hero */
+.hero{background:var(--navy);color:var(--on-navy);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:auto -10% -55% 35%;height:110%;background:radial-gradient(closest-side,rgba(255,200,61,.16),transparent);pointer-events:none}
+.hero-in{position:relative;z-index:1;display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center;padding-block:clamp(40px,6vw,72px) 36px}
+.hero-date{display:flex;align-items:stretch;gap:14px;font-family:var(--f-display);font-stretch:62%;font-weight:150;line-height:.8}
+.hero-date .d{font-size:clamp(108px,15vw,210px);letter-spacing:-.04em;font-variant-numeric:tabular-nums;white-space:nowrap}
+.hero-date .m{display:flex;flex-direction:column;justify-content:space-between;border-left:1.5px solid rgba(255,255,255,.4);padding:.12em 0 .1em 14px;font-size:clamp(36px,4.6vw,64px);letter-spacing:.02em}
+.hero-date .m em{font-style:normal;color:var(--sun)}
+.kicker{font-family:var(--f-display);font-stretch:100%;font-weight:600;letter-spacing:.32em;text-transform:uppercase;font-size:clamp(13px,1.3vw,16px);color:var(--sun)}
+.hero h1{margin-top:12px;font-family:var(--f-display);font-stretch:70%;font-weight:850;text-transform:uppercase;line-height:.86;letter-spacing:-.005em;font-size:clamp(56px,8.4vw,124px)}
+.hero h1 span{display:block;font-weight:300;font-size:.52em;letter-spacing:.04em;margin-top:.18em}
+.hero h1 span i{font-style:normal;color:var(--sun);font-weight:700}
+.hero .lede{margin-top:22px;max-width:56ch;font-size:clamp(16px,1.4vw,18px);color:var(--on-navy-muted)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.deadline-bar{position:relative;z-index:1;background:var(--sun);color:var(--sun-ink)}
+.deadline-bar .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;padding-block:14px}
+.deadline-bar b{font-family:var(--f-display);font-stretch:72%;font-weight:800;text-transform:uppercase;font-size:20px;letter-spacing:.01em}
+.deadline-bar a{color:inherit;font-weight:700;margin-left:auto}
+.count{font-family:var(--f-mono);font-size:12.5px;font-weight:700;padding:5px 10px;border-radius:999px;background:var(--sun-ink);color:var(--sun);white-space:nowrap}
+
+/* Sponsors */
+.sponsors{background:var(--surface);border-bottom:1px solid var(--line)}
+.sponsors .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px 40px;padding-block:20px}
+.sp{display:flex;align-items:center;flex-wrap:wrap;gap:14px 24px}
+.sp-label{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.sp img{display:block;height:58px;width:auto}
+.sp.pres img{height:auto;width:200px}
+
+/* Facts */
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;padding-block:36px 8px}
+.fact{padding:4px 22px 4px 0;display:flex;flex-direction:column;gap:6px;min-width:0}
+.fact + .fact{padding-left:22px;border-left:1px solid var(--line)}
+.fact .v{font-family:var(--f-display);font-stretch:72%;font-weight:750;font-size:clamp(24px,2.4vw,30px);line-height:1.02;text-transform:uppercase}
+.fact .n{font-size:14px;color:var(--muted)}
+
+/* Sections */
+section.band{padding-block:clamp(56px,7vw,88px)}
+.sec-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px 32px;margin-bottom:22px}
+.sec-head h2{margin-top:10px;font-family:var(--f-display);font-stretch:72%;font-weight:800;text-transform:uppercase;line-height:.95;font-size:clamp(38px,5.4vw,64px)}
+.sec-head p{margin-top:12px;color:var(--muted);max-width:58ch}
+
+/* Floor plan */
+.tabs{display:flex;flex-wrap:wrap;gap:6px}
+.tab{font:700 14px/1 var(--f-body);padding:10px 14px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.tab[disabled]{cursor:not-allowed;color:var(--muted)}
+.tab small{font-family:var(--f-mono);font-size:10.5px;font-weight:500;margin-left:6px}
+.plan-grid{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:16px}
+.stage-wrap{position:relative;background:var(--scene-bg);border-radius:20px;overflow:hidden;min-width:0;box-shadow:0 0 0 1px var(--line)}
+.stage{position:relative;height:620px;touch-action:pan-y;cursor:grab}
+.stage canvas{display:block;width:100%;height:100%}
+.stage.dragging{cursor:grabbing}
+.stage.over{cursor:pointer}
+.stage svg{display:block;width:100%;height:100%}
+.ov{position:absolute;background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:0 8px 20px -12px var(--shadow)}
+.hint{left:12px;top:12px;font-size:12.5px;color:var(--muted);padding:7px 11px}
+.compass{right:12px;top:12px;width:46px;height:46px;border-radius:50%;display:grid;place-items:center}
+.compass svg{width:30px;height:30px}
+.legend{left:12px;bottom:12px;display:flex;gap:12px;flex-wrap:wrap;font-size:12.5px;padding:8px 11px}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.controls{position:absolute;right:12px;bottom:12px;display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;max-width:60%}
+.ctl{font:700 13px/1 var(--f-body);min-width:40px;height:40px;padding:0 12px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;box-shadow:0 8px 20px -12px var(--shadow)}
+.ctl:hover{border-color:var(--ink)}
+.tip{position:absolute;pointer-events:none;background:var(--ink);color:var(--bg);font-size:13px;font-weight:600;padding:6px 10px;border-radius:8px;white-space:nowrap;transform:translate(-50%,-130%)}
+.tip b{font-family:var(--f-mono)}
+.side{display:flex;flex-direction:column;gap:12px;min-width:0}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:20px}
+.card h3{font-family:var(--f-display);font-stretch:75%;font-weight:750;font-size:24px;line-height:1.05;text-transform:uppercase}
+.booth-id{font-family:var(--f-mono);font-weight:700;font-size:44px;line-height:1;letter-spacing:-.03em}
+.pill{display:inline-block;font-family:var(--f-mono);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:5px 9px;border-radius:999px;color:var(--st-ink);white-space:nowrap}
+.pill.open{background:var(--st-open)}.pill.hold{background:var(--st-hold)}.pill.booked{background:var(--st-booked)}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:14px;margin:14px 0 0}
+.kv dt{color:var(--muted)}.kv dd{margin:0;font-weight:600}
+.counts{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
+.counts div{border-radius:12px;padding:10px;color:var(--st-ink)}
+.counts b{display:block;font-family:var(--f-mono);font-size:24px;font-variant-numeric:tabular-nums}
+.counts span{font-size:12px;font-weight:700}
+.search label{font-weight:700;font-size:14px}
+.search input{width:100%;font:15px var(--f-body);padding:11px 14px;border:1.5px solid var(--line);border-radius:999px;background:var(--bg);color:var(--ink);margin-top:8px}
+.results{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-direction:column;gap:2px;max-height:200px;overflow:auto}
+.results button{width:100%;text-align:left;font:14px var(--f-body);background:none;border:0;padding:7px 6px;color:var(--ink);cursor:pointer;border-radius:8px}
+.results button:hover{background:var(--bg)}
+
+/* Guide book */
+.guide{background:var(--navy-2);color:var(--on-navy)}
+.guide .eyebrow{color:var(--sun)}
+.guide .sec-head p{color:var(--on-navy-muted)}
+.book-shell{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:14px}
+.book-stage{width:100%;max-width:1060px;margin:0 auto;padding-block:8px 18px}
+.book{position:relative;width:100%;aspect-ratio:1800/1165;perspective:2800px;transition:transform .7s cubic-bezier(.3,.1,.2,1);cursor:pointer;outline:none}
+.book[data-pos="start"]{transform:translateX(-25%)}
+.book[data-pos="end"]{transform:translateX(25%)}
+.book:focus-visible{outline:3px solid var(--sun);outline-offset:8px;border-radius:6px}
+.leaf{position:absolute;top:0;left:50%;width:50%;height:100%;transform-origin:left center;transform-style:preserve-3d;transition:transform .9s cubic-bezier(.35,.1,.2,1)}
+.leaf.flipped{transform:rotateY(-180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:#fff;overflow:hidden;box-shadow:0 26px 50px -24px rgba(0,0,0,.6)}
+.face img{display:block;width:100%;height:100%;object-fit:cover;user-select:none;-webkit-user-drag:none;pointer-events:none}
+.face.front{border-radius:0 6px 6px 0}
+.face.back{transform:rotateY(180deg);border-radius:6px 0 0 6px}
+.face::after{content:"";position:absolute;inset:0;pointer-events:none}
+.face.front::after{background:linear-gradient(90deg,rgba(0,0,0,.22),rgba(0,0,0,0) 7%,rgba(0,0,0,0) 94%,rgba(0,0,0,.05))}
+.face.back::after{background:linear-gradient(270deg,rgba(0,0,0,.22),rgba(0,0,0,0) 7%,rgba(0,0,0,0) 94%,rgba(0,0,0,.05))}
+.leaf.spread .face.back::after,.leaf.spread-r .face.front::after{background:linear-gradient(90deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0) 100%)}
+.pg-btn{width:52px;height:52px;border-radius:50%;border:1.5px solid rgba(255,255,255,.3);background:rgba(255,255,255,.06);color:var(--on-navy);font-size:22px;cursor:pointer;display:grid;place-items:center}
+.pg-btn:hover:not(:disabled){background:rgba(255,255,255,.14)}
+.pg-btn:disabled{opacity:.3;cursor:default}
+.book-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 14px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+.chip{font:600 13.5px/1 var(--f-body);padding:9px 13px;border-radius:999px;border:1.5px solid rgba(255,255,255,.25);background:transparent;color:var(--on-navy-muted);cursor:pointer}
+.chip[aria-current="true"]{background:var(--sun);border-color:var(--sun);color:var(--sun-ink)}
+.book-status{font-family:var(--f-mono);font-size:12.5px;color:var(--on-navy-muted)}
+.read-btn{font:700 14px/1 var(--f-body);padding:10px 16px;border-radius:999px;border:1.5px solid var(--on-navy);background:var(--on-navy);color:var(--navy-2);cursor:pointer}
+
+.offer{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.6fr);gap:20px;margin-top:56px;align-items:stretch}
+.price-card{background:var(--sun);color:var(--sun-ink);border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:8px;position:relative;overflow:hidden}
+.price-card .eyebrow{color:var(--sun-ink);opacity:.75}
+.price-card h3{font-family:var(--f-display);font-stretch:72%;font-weight:800;text-transform:uppercase;font-size:clamp(26px,2.8vw,34px);line-height:1}
+.price{font-family:var(--f-display);font-stretch:62%;font-weight:200;font-size:clamp(96px,11vw,140px);line-height:.85;letter-spacing:-.03em;margin-top:6px}
+.price sup{font-size:.4em;font-weight:400;vertical-align:.95em;margin-right:2px}
+.adsize{display:flex;align-items:center;gap:12px;font-weight:700}
+.freebies{list-style:none;margin:2px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.freebies li{display:flex;align-items:center;gap:7px;font-weight:700;font-size:14.5px;background:rgba(29,22,0,.08);padding:6px 12px 6px 8px;border-radius:999px}
+.freebies li::before{content:"";width:16px;height:16px;border-radius:50%;flex:none;background:var(--sun-ink) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.2l2.6 2.6L12 5.4' fill='none' stroke='%23ffc83d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat}
+.adsize i{flex:none;width:58px;height:33px;border:2px dashed var(--sun-ink);border-radius:4px;display:grid;place-items:center;font-style:normal;font-family:var(--f-mono);font-size:9.5px;font-weight:700}
+.pay-due{margin-top:auto;padding-top:14px;border-top:1.5px solid rgba(29,22,0,.2);font-weight:600}
+.pay-due b{display:block;font-family:var(--f-display);font-stretch:72%;text-transform:uppercase;font-size:22px;font-weight:800;line-height:1.05;margin-top:2px}
+.price-card .btn{margin-top:14px;background:var(--sun-ink);border-color:var(--sun-ink);color:var(--sun)}
+.benefits{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:24px;padding:28px}
+.benefits h3{font-family:var(--f-display);font-stretch:72%;font-weight:800;text-transform:uppercase;font-size:clamp(26px,2.8vw,34px);line-height:1}
+.benefits > p{color:var(--on-navy-muted);margin-top:10px;max-width:60ch}
+.ben-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 28px;margin-top:22px}
+.ben{border-top:2px solid var(--sun);padding-top:12px;min-width:0}
+.ben b{display:block;font-size:16.5px}
+.ben span{display:block;color:var(--on-navy-muted);font-size:14.5px;margin-top:4px}
+
+/* Lightbox */
+.lightbox{position:fixed;inset:0;z-index:100;background:rgba(5,10,24,.94);display:flex;flex-direction:column}
+.lb-top{display:flex;align-items:center;gap:10px;justify-content:space-between;padding:calc(12px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) 12px max(16px,env(safe-area-inset-left,0px));color:#fff}
+.lb-top b{font-family:var(--f-mono);font-size:13px}
+.lb-top div{display:flex;gap:8px}
+.lb-btn{font:700 14px/1 var(--f-body);height:40px;min-width:40px;padding:0 14px;border-radius:999px;border:1.5px solid rgba(255,255,255,.35);background:transparent;color:#fff;cursor:pointer}
+.lb-btn:disabled{opacity:.3}
+.lb-body{flex:1;overflow:auto;padding:0 max(16px,env(safe-area-inset-right,0px)) calc(24px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));display:flex;flex-direction:column;align-items:center;gap:16px}
+.lb-body img{width:100%;max-width:1100px;height:auto;display:block;border-radius:4px;background:#fff}
+
+/* Booking */
+.renew-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(28px,4vw,56px);align-items:start}
+.renew-info .lede{margin-top:14px;font-size:17px;color:var(--muted);max-width:50ch}
+.steps{list-style:none;counter-reset:s;margin:28px 0 0;padding:0;display:flex;flex-direction:column}
+.steps li{counter-increment:s;display:grid;grid-template-columns:48px minmax(0,1fr);column-gap:16px;padding:16px 0;border-top:1px solid var(--line)}
+.steps li:last-child{border-bottom:1px solid var(--line)}
+.steps li::before{content:counter(s);grid-row:span 2;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;font-family:var(--f-display);font-stretch:70%;font-weight:800;font-size:24px;background:var(--navy);color:var(--on-navy)}
+.steps li:last-child::before{background:var(--sun);color:var(--sun-ink)}
+.steps b{font-size:17px}
+.steps span{color:var(--muted);font-size:15px}
+.warn{margin-top:22px;background:var(--alert-bg);border:1.5px solid var(--alert);border-radius:var(--r);padding:16px 18px;display:flex;flex-direction:column;gap:6px}
+.warn b{color:var(--alert)}
+.warn .count{align-self:flex-start;margin-top:4px;background:var(--alert);color:#fff}
+.contact-line{margin-top:20px;font-size:15px}
+.contact-line code{font-family:var(--f-mono);font-size:14px;background:var(--surface);border:1px solid var(--line);padding:3px 8px;border-radius:6px}
+form{background:var(--surface);border-radius:24px;padding:28px;display:grid;grid-template-columns:1fr 1fr;gap:16px;box-shadow:0 0 0 1px var(--line),0 30px 60px -40px var(--shadow)}
+form h3{grid-column:1/-1;font-family:var(--f-display);font-stretch:72%;font-weight:800;text-transform:uppercase;font-size:30px;line-height:1}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.field.full{grid-column:1/-1}
+label{font-weight:700;font-size:14px}
+input{font:16px var(--f-body);padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);width:100%}
+input:focus{outline:2px solid var(--leaf);outline-offset:0;border-color:var(--leaf)}
+.err{font-size:13px;color:var(--alert)}
+.err:empty{display:none}
+.optin{grid-column:1/-1;display:flex;gap:14px;align-items:flex-start;background:var(--bg);border:1.5px solid var(--line);border-radius:16px;padding:16px;cursor:pointer}
+.optin:has(input:checked){border-color:var(--leaf);background:color-mix(in srgb,var(--leaf) 9%,var(--surface))}
+.optin input{width:22px;height:22px;margin:1px 0 0;flex:none;accent-color:var(--leaf)}
+.optin small{display:block;font-weight:400;color:var(--muted);font-size:13.5px;margin-top:3px}
+.optin .tag{display:inline-block;font-family:var(--f-mono);font-size:11px;font-weight:700;background:var(--sun);color:var(--sun-ink);padding:2px 7px;border-radius:999px;margin-left:6px;vertical-align:1px}
+.fine{grid-column:1/-1;font-size:13px;color:var(--muted)}
+form>.btn{grid-column:1/-1;padding:17px 20px;font-size:16px}
+.done{grid-column:1/-1;display:flex;flex-direction:column;gap:6px;background:color-mix(in srgb,var(--leaf) 10%,var(--surface));border:1.5px solid var(--leaf);border-radius:16px;padding:16px 18px}
+.done b{color:var(--leaf);font-size:17px}
+form{position:relative}
+.sent{grid-column:1/-1;border-top:2px dashed var(--line);padding-top:16px;display:flex;flex-direction:column;gap:12px}
+.sent pre{margin:0;font-family:var(--f-mono);font-size:13px;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px;white-space:pre-wrap;overflow-wrap:anywhere}
+.sent .row{display:flex;flex-wrap:wrap;gap:10px}
+
+/* Social + footer */
+.social-card{background:var(--surface);border-radius:24px;box-shadow:0 0 0 1px var(--line);padding:28px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center}
+.social-card h2{font-family:var(--f-display);font-stretch:72%;font-weight:800;text-transform:uppercase;font-size:clamp(28px,3.4vw,40px);line-height:1;margin-top:8px}
+.social-card p{color:var(--muted);margin-top:10px;max-width:60ch}
+.social-actions{display:flex;flex-direction:column;gap:10px;min-width:230px}
+.soon{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:center}
+footer{background:var(--navy-2);color:var(--on-navy-muted);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-block:26px 34px}
+footer b{color:var(--on-navy)}
+
+@media (max-width:980px){
+  .links{display:none}
+  .nav .btn{margin-left:auto}
+  .hero-in{grid-template-columns:1fr}
+  .plan-grid,.renew-grid,.offer{grid-template-columns:1fr}
+  .facts{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:22px}
+  .fact:nth-child(3){padding-left:0;border-left:0}
+}
+@media (max-width:640px){
+  .hero-date .d{font-size:clamp(76px,24vw,108px)}
+  .hero-date .m{font-size:clamp(28px,9vw,40px)}
+  .brand span{display:none}
+  .stage{height:460px}
+  .hint{display:none}
+  .legend{bottom:auto;top:12px;right:68px}
+  .controls{max-width:100%;left:12px}
+  form{grid-template-columns:1fr;padding:20px}
+  .ben-grid{grid-template-columns:1fr}
+  .social-card{grid-template-columns:1fr}
+  .social-actions{min-width:0}
+  .book-shell{grid-template-columns:1fr}
+  .pg-btn{display:none}
+  .deadline-bar a{margin-left:0}
+  .sp img{height:46px}
+  .sp.pres img{width:170px}
+}
+@media (max-width:420px){
+  .facts{grid-template-columns:1fr}
+  .fact + .fact{padding-left:0;border-left:0;border-top:1px solid var(--line);padding-top:16px}
+  .brand b{font-size:18px}
+}
+@media (prefers-reduced-motion:reduce){.book,.leaf{transition:none}.btn{transition:none}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top"><b>Home, Garden &amp; Leisure Show</b><span>Vendors · 2027</span></a>
+    <nav class="links" aria-label="Sections">
+      <a href="#plan">Floor plan</a>
+      <a href="#guide">Guide book</a>
+      <a href="#renew">How booking works</a>
+    </nav>
+    <a class="btn sun sm" href="#renew">Renew my booth</a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap hero-in">
+    <div class="hero-date" aria-label="April 9 to 11, 2027">
+      <span class="d" aria-hidden="true">9–11</span>
+      <span class="m" aria-hidden="true"><span>April</span><em>2027</em></span>
+    </div>
+    <div>
+      <p class="kicker">Northumberland</p>
+      <h1>Home, Garden <span><i>&amp;</i> Leisure Show</span></h1>
+      <p class="lede">Vendor booking for three days at the Cobourg Community Centre. Renew your booth, find your spot on the show floor and get your business into the 2027 Guide Book.</p>
+      <div class="cta">
+        <a class="btn sun" href="#renew">Renew my booth</a>
+        <a class="btn line-light" href="#plan">See the floor plan</a>
+      </div>
+    </div>
+  </div>
+  <div class="deadline-bar">
+    <div class="wrap">
+      <b>Booth payment due Wed, Dec 23 · 5 PM</b>
+      <span>Full payment confirms your booth.</span>
+      <span class="count" data-countdown hidden></span>
+      <a href="#renew">How booking works</a>
+    </div>
+  </div>
+</section>
+
+<div class="sponsors">
+  <div class="wrap">
+    <div class="sp">
+      <span class="sp-label">Hosted by</span>
+      <img src="assets/myfm.png" alt="myFM 93.3" width="253" height="260">
+      <img src="assets/rock.png" alt="Classic Rock 107.9" width="300" height="199">
+      <img src="assets/wow.png" alt="100.9 WOW FM" width="300" height="208">
+    </div>
+    <div class="sp pres">
+      <span class="sp-label">Presented by</span>
+      <img src="assets/rhret.png" alt="Ryan Huffman Real Estate Team" width="440" height="180">
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="facts">
+    <div class="fact"><span class="eyebrow">Show days</span><span class="v">Fri–Sun, April 9–11</span><span class="n">Moved up from our usual late-May weekend</span></div>
+    <div class="fact"><span class="eyebrow">Venue</span><span class="v">Cobourg Community Centre</span><span class="n">750 D'Arcy St., Cobourg</span></div>
+    <div class="fact"><span class="eyebrow">Fully indoors</span><span class="v">Four spaces</span><span class="n">Gymnasium, Grand Hall, Community Rooms and Lobby</span></div>
+    <div class="fact"><span class="eyebrow">Every booth</span><span class="v">Power included</span><span class="n">90 booths in the gymnasium alone</span></div>
+  </div>
+</div>
+
+<section class="band" id="plan">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow">Interactive floor plan</div>
+        <h2>Find your spot on the floor</h2>
+        <p>Drag to look around and zoom in. Tap any booth to see who's in it, or find an open one.</p>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Rooms">
+        <button class="tab" role="tab" aria-selected="true" id="tab-gym">Gymnasium</button>
+        <button class="tab" role="tab" aria-selected="false" disabled>Grand Hall<small>soon</small></button>
+        <button class="tab" role="tab" aria-selected="false" disabled>Community Rooms<small>soon</small></button>
+        <button class="tab" role="tab" aria-selected="false" disabled>Lobby<small>soon</small></button>
+      </div>
+    </div>
+    <div class="plan-grid">
+      <div class="stage-wrap">
+        <div class="stage" id="stage" aria-label="3D view of the gymnasium show floor"></div>
+        <div class="ov hint" id="hint">Drag to turn · right-drag to move · scroll to zoom</div>
+        <div class="ov compass" title="North"><svg id="compass" viewBox="0 0 30 30" aria-label="North arrow"><path d="M15 2 L21 17 L15 14 L9 17Z" fill="var(--tulip)"/><path d="M15 28 L21 17 L15 20 L9 17Z" fill="var(--muted)" opacity=".5"/><text x="15" y="11.5" font-size="6.5" text-anchor="middle" fill="#fff" font-family="JetBrains Mono, monospace" font-weight="700">N</text></svg></div>
+        <div class="ov legend" aria-label="Legend">
+          <span><i style="background:var(--st-open)"></i>Open</span>
+          <span><i style="background:var(--st-hold)"></i>Held for renewal</span>
+          <span><i style="background:var(--st-booked)"></i>Booked</span>
+        </div>
+        <div class="controls">
+          <button class="ctl" id="rotL" aria-label="Turn left">⟲</button>
+          <button class="ctl" id="rotR" aria-label="Turn right">⟳</button>
+          <button class="ctl" id="zoomOut" aria-label="Zoom out">−</button>
+          <button class="ctl" id="zoomIn" aria-label="Zoom in">+</button>
+          <button class="ctl" id="viewToggle">Top view</button>
+          <button class="ctl" id="reset">Reset</button>
+        </div>
+        <div class="tip" id="tip" hidden></div>
+      </div>
+      <aside class="side">
+        <div class="card" id="panel" aria-live="polite"></div>
+        <div class="card search">
+          <label for="q">Find a vendor or booth</label>
+          <input id="q" type="search" placeholder="Business name or booth, e.g. B07" autocomplete="off">
+          <ul class="results" id="results"></ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="band guide" id="guide">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow">Home Show Guide Book</div>
+        <h2>Flip through the guide</h2>
+        <p>This is the 2026 edition. Every visitor gets a free copy at the door and takes it home. The 2027 guide is in the works, and there's room for your business in it.</p>
+      </div>
+    </div>
+
+    <div class="book-shell">
+      <button class="pg-btn" id="bookPrev" aria-label="Previous pages">‹</button>
+      <div class="book-stage">
+        <div class="book" id="book" data-pos="start" tabindex="0" role="region" aria-roledescription="flip book" aria-label="2026 Home Show Guide Book. Use the arrow keys to turn pages.">
+          <div class="leaf"><div class="face front"><img src="guide/p1.jpg" alt="Guide page 1, cover" width="900" height="1165"></div><div class="face back"><img src="guide/p2.jpg" alt="Guide page 2" width="900" height="1165"></div></div>
+          <div class="leaf"><div class="face front"><img src="guide/p3.jpg" alt="Guide page 3" width="900" height="1165"></div><div class="face back"><img src="guide/p4.jpg" alt="Guide page 4, left half of the centre spread" width="900" height="1165"></div></div>
+          <div class="leaf spread-r"><div class="face front"><img src="guide/p5.jpg" alt="Guide page 5, right half of the centre spread" width="900" height="1165"></div><div class="face back"><img src="guide/p6.jpg" alt="Guide page 6" width="900" height="1165"></div></div>
+          <div class="leaf"><div class="face front"><img src="guide/p7.jpg" alt="Guide page 7" width="900" height="1165"></div><div class="face back"><img src="guide/p8.jpg" alt="Guide page 8, back cover" width="900" height="1165"></div></div>
+        </div>
+      </div>
+      <button class="pg-btn" id="bookNext" aria-label="Next pages">›</button>
+    </div>
+    <div class="book-bar">
+      <div class="chips" id="chips">
+        <button class="chip" data-s="0">Cover</button>
+        <button class="chip" data-s="1">2–3</button>
+        <button class="chip" data-s="2">4–5 · Centre spread</button>
+        <button class="chip" data-s="3">6–7</button>
+        <button class="chip" data-s="4">Back cover</button>
+      </div>
+      <span class="book-status" id="bookStatus">Tap the cover to open</span>
+      <button class="read-btn" id="readBtn">Read these pages</button>
+    </div>
+
+    <div class="offer">
+      <div class="price-card">
+        <span class="eyebrow">Home show vendor special</span>
+        <h3>Your business in the 2027 Guide Book</h3>
+        <div class="price"><sup>$</sup>299</div>
+        <div class="adsize"><i>AD</i><span>Business-card size ad</span></div>
+        <ul class="freebies"><li>Free design</li><li>Free production</li></ul>
+        <div class="pay-due">Nothing to pay until <b>Friday, February 26, 2027</b></div>
+        <a class="btn" href="#renew" id="guideCta">Add my business</a>
+      </div>
+      <div class="benefits">
+        <h3>Why vendors take an ad</h3>
+        <p>Think of the guide as the local best-of book for home, garden and leisure, like a yellow pages for the businesses people want to hire.</p>
+        <div class="ben-grid">
+          <div class="ben"><b>Free in every visitor's hands</b><span>The guide is handed out free at the show, and attendees take it home with them.</span></div>
+          <div class="ben"><b>Kept long after the weekend</b><span>People hold on to it and pull it out when the deck, roof or kitchen project finally comes up.</span></div>
+          <div class="ben"><b>Found again after the show</b><span>Visitors who met you at your booth can look you up later, without hunting for a business card.</span></div>
+          <div class="ben"><b>In good company</b><span>Your ad sits beside the region's home, garden and leisure businesses, where people go looking for exactly what you do.</span></div>
+          <div class="ben"><b>Online as well as in print</b><span>The guide also lives online as a flip-through edition like this one, so your ad reaches people beyond the show floor.</span></div>
+          <div class="ben"><b>Priced for show businesses</b><span>$299 is a special rate for businesses taking part in the home show, with payment not due until February 26, 2027.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="renew">
+  <div class="wrap renew-grid">
+    <div class="renew-info">
+      <div class="eyebrow">Returning vendors</div>
+      <div class="sec-head" style="margin-bottom:0"><div><h2>Renew my booth</h2></div></div>
+      <p class="lede">Complete the form to let us know you'd like to renew your booth. We'll follow up with more information, including pricing.</p>
+      <ol class="steps">
+        <li><b>Send the form</b><span>Tell us you'd like to renew and want booth pricing and details.</span></li>
+        <li><b>Get your pricing</b><span>We'll send pricing and everything you need to know about your booth.</span></li>
+        <li><b>Pay in full by Wednesday, December 23 at 5 PM</b><span>Full payment confirms your booth.</span></li>
+      </ol>
+      <div class="warn" role="note">
+        <b>Sending the form does not reserve your booth.</b>
+        <span>If full payment isn't received by Wednesday, December 23 at 5 PM, we have the right to open your booth to our waitlist.</span>
+        <span class="count" data-countdown hidden></span>
+      </div>
+      <p class="contact-line">Requests go to Tommy at <code>tommyw@mbcmedia.ca</code></p>
+    </div>
+    <form id="form" novalidate>
+      <h3>Renewal request</h3>
+      <div class="field full">
+        <label for="biz">Business name</label>
+        <input id="biz" name="biz" required autocomplete="organization">
+        <span class="err" id="biz-err"></span>
+      </div>
+      <div class="field full">
+        <label for="contact">Contact name</label>
+        <input id="contact" name="contact" required autocomplete="name">
+        <span class="err" id="contact-err"></span>
+      </div>
+      <div class="field">
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" type="tel" required autocomplete="tel" inputmode="tel">
+        <span class="err" id="phone-err"></span>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required autocomplete="email">
+        <span class="err" id="email-err"></span>
+      </div>
+      <label class="optin" for="guideAd">
+        <input type="checkbox" id="guideAd" name="guideAd" checked>
+        <span>Include my business in the 2027 Guide Book <span class="tag">$299</span>
+          <small>Business-card size ad at the home show vendor special. Payment isn't due until February 26, 2027. Untick this box if you'd rather not.</small></span>
+      </label>
+      <p class="fine">Sending this form tells us you'd like to renew and get pricing. It does not reserve your booth. Full payment by Wednesday, December 23 at 5 PM confirms it.</p>
+      <input type="checkbox" name="botcheck" id="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+      <button class="btn" type="submit" id="submitBtn">Send my renewal request</button>
+      <div class="done" id="done" role="status" hidden>
+        <b>Request sent. Thank you!</b>
+        <span>Tommy will follow up with pricing and booth details. Remember, this request doesn't reserve your booth. Full payment by Wednesday, December 23 at 5 PM confirms it.</span>
+      </div>
+      <div class="sent" id="sent" hidden>
+        <p id="sentMsg"><b>Almost done.</b> Open your email app to send this request, or copy it into an email to <b>tommyw@mbcmedia.ca</b>.</p>
+        <pre id="summary"></pre>
+        <div class="row">
+          <a class="btn" id="mailLink" href="#">Open in my email app</a>
+          <button type="button" class="btn ghost" id="copyBtn">Copy request</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="band" id="follow" style="padding-top:0">
+  <div class="wrap">
+    <div class="social-card">
+      <div>
+        <div class="eyebrow">Stay in the loop</div>
+        <h2>Follow our new Facebook page</h2>
+        <p>Get show news and vendor updates as they happen. Share the page with your customers and your community so they know where to find you in April.</p>
+      </div>
+      <div class="social-actions">
+        <a class="btn" id="fbLink" href="#" target="_blank" rel="noopener">Follow us on Facebook</a>
+        <button type="button" class="btn ghost" id="shareBtn">Copy a share message</button>
+        <span class="soon" id="fbSoon">Page link coming soon</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Guide book pages" hidden>
+  <div class="lb-top">
+    <b id="lbTitle">Cover</b>
+    <div>
+      <button class="lb-btn" id="lbPrev" aria-label="Previous pages">‹</button>
+      <button class="lb-btn" id="lbNext" aria-label="Next pages">›</button>
+      <button class="lb-btn" id="lbClose">Close</button>
+    </div>
+  </div>
+  <div class="lb-body" id="lbBody"></div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span><b>Northumberland Home, Garden &amp; Leisure Show</b> · April 9–11, 2027 · Cobourg Community Centre</span>
+    <span>Hosted by myFM 93.3, Classic Rock 107.9 and 100.9 WOW FM · Presented by the Ryan Huffman Real Estate Team</span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+  /* ---- Vendor assignments ----
+     Copied from the "Home Show 2027 Booth Assignments" Google Sheet (Booth, Status, Business name,
+     Business category, Website). One entry per booked or held booth:
+     "A07": { status:"Booked", name:"Business Name", category:"Landscaping", website:"https://..." }
+     Status is "Booked" or "Held for renewal". Booths not listed are open. */
+  /* Synced from the sheet on Oct 28, 2026. Named booths marked "Open" in the sheet show as held for renewal. */
+  const VENDORS = {
+    "A01": {"status": "Held for renewal", "name": "Ryan Huffman Real Estate"},
+    "A02": {"status": "Held for renewal", "name": "Rusco Windows and Doors"},
+    "A03": {"status": "Held for renewal", "name": "Rusco Windows and Doors"},
+    "A04": {"status": "Held for renewal", "name": "Capitol Theatre"},
+    "A05": {"status": "Held for renewal", "name": "Crew Cut Property Maintenance"},
+    "A06": {"status": "Held for renewal", "name": "Antique Lumber"},
+    "A07": {"status": "Held for renewal", "name": "Altona Painting"},
+    "A08": {"status": "Held for renewal", "name": "Expedia Cruises"},
+    "A09": {"status": "Held for renewal", "name": "Landscape Design Hub"},
+    "A10": {"status": "Held for renewal", "name": "BAM Quick Bins"},
+    "A11": {"status": "Held for renewal", "name": "GWC Insulation"},
+    "A12": {"status": "Held for renewal", "name": "Stadtke Plumbing and Heating"},
+    "A13": {"status": "Held for renewal", "name": "Lakefront Utilities"},
+    "A14": {"status": "Held for renewal", "name": "Bouwman's Cabinetry"},
+    "A15": {"status": "Held for renewal", "name": "Golden Tap Plumbing"},
+    "A16": {"status": "Held for renewal", "name": "Mazzone Doors and Windows"},
+    "A17": {"status": "Held for renewal", "name": "Living Well HME"},
+    "A18": {"status": "Held for renewal", "name": "Town & Country Garage Doors"},
+    "A19": {"status": "Held for renewal", "name": "Mosquito Gone"},
+    "A20": {"status": "Held for renewal", "name": "Ryan Huffman Real Estate"},
+    "B01": {"status": "Held for renewal", "name": "Hoover's Home Energy"},
+    "B02": {"status": "Held for renewal", "name": "New Amherst Window Fashions"},
+    "B03": {"status": "Held for renewal", "name": "Mistral Group"},
+    "B04": {"status": "Held for renewal", "name": "DeNure Tours"},
+    "B05": {"status": "Held for renewal", "name": "John Greenlee, The Mortgage Centre Cobourg"},
+    "B06": {"status": "Held for renewal", "name": "Sensational Seams"},
+    "B07": {"status": "Held for renewal", "name": "Sunspace"},
+    "B08": {"status": "Held for renewal", "name": "Axle Telecom"},
+    "B09": {"status": "Held for renewal", "name": "Black Bottom Driveway"},
+    "B10": {"status": "Held for renewal", "name": "5th Avenue Collection"},
+    "B11": {"status": "Held for renewal", "name": "Ethic Tree Creations"},
+    "B12": {"status": "Held for renewal", "name": "Jescore"},
+    "B13": {"status": "Held for renewal", "name": "Bioped Cobourg"},
+    "B14": {"status": "Held for renewal", "name": "One Landscape"},
+    "B15": {"status": "Held for renewal", "name": "Gerard Metal Roofing"},
+    "B16": {"status": "Held for renewal", "name": "Propel Garages"},
+    "B17": {"status": "Held for renewal", "name": "Wright Insurance and Investments, The Cooperators"},
+    "B18": {"status": "Held for renewal", "name": "Rosewood Estates"},
+    "B19": {"status": "Held for renewal", "name": "The Deck Guys"},
+    "B20": {"status": "Held for renewal", "name": "Hoover's Home Energy"},
+    "C01": {"status": "Held for renewal", "name": "Dickson Carpet One"},
+    "C02": {"status": "Held for renewal", "name": "Duct Wise Duct Cleaning"},
+    "C03": {"status": "Held for renewal", "name": "Birdy Talk Seed Co."},
+    "C04": {"status": "Held for renewal", "name": "Pavement Pros"},
+    "C05": {"status": "Held for renewal", "name": "Ashley Packard"},
+    "C06": {"status": "Held for renewal", "name": "Dulux Paints"},
+    "C07": {"status": "Held for renewal", "name": "Peter Street Cabinetry"},
+    "C08": {"status": "Held for renewal", "name": "Powersource Electric"},
+    "C09": {"status": "Held for renewal", "name": "PTBO Waterproofing and Mold Removal"},
+    "C10": {"status": "Held for renewal", "name": "Magic Windows"},
+    "C11": {"status": "Held for renewal", "name": "Magic Windows"},
+    "C12": {"status": "Held for renewal", "name": "Double Diamond Duct Cleaning"},
+    "C13": {"status": "Held for renewal", "name": "Habitat for Humanity"},
+    "C14": {"status": "Held for renewal", "name": "Lakeland Multi-Trade"},
+    "C15": {"status": "Held for renewal", "name": "Durable Fence"},
+    "C16": {"status": "Held for renewal", "name": "Franklin Tint"},
+    "C17": {"status": "Held for renewal", "name": "Elevated Arboriculture"},
+    "C18": {"status": "Held for renewal", "name": "Leaf Filter"},
+    "C20": {"status": "Held for renewal", "name": "Dickson Carpet One"},
+    "D01": {"status": "Held for renewal", "name": "Vosburgh Home Decor"},
+    "D02": {"status": "Held for renewal", "name": "Spray Net"},
+    "D03": {"status": "Held for renewal", "name": "Spray Net"},
+    "D04": {"status": "Held for renewal", "name": "Bildam Home Improvements"},
+    "D05": {"status": "Held for renewal", "name": "Student Works"},
+    "D06": {"status": "Held for renewal", "name": "S&O Outdoor Furniture"},
+    "D07": {"status": "Held for renewal", "name": "Jay's Landscape"},
+    "D08": {"status": "Held for renewal", "name": "JCK Seamless Eavestroughs"},
+    "D09": {"status": "Held for renewal", "name": "Mazdak Leisure"},
+    "D10": {"status": "Held for renewal", "name": "Mazdak Leisure"},
+    "D11": {"status": "Held for renewal", "name": "Mazdak Leisure"},
+    "D12": {"status": "Held for renewal", "name": "Mazdak Leisure"},
+    "D13": {"status": "Held for renewal", "name": "Green Crew Contracting"},
+    "D14": {"status": "Held for renewal", "name": "Postech Piers Northumberland"},
+    "D15": {"status": "Held for renewal", "name": "Infiniti Home Comfort"},
+    "D16": {"status": "Held for renewal", "name": "Infiniti Home Comfort"},
+    "D17": {"status": "Held for renewal", "name": "Sylvia Poissant"},
+    "D18": {"status": "Held for renewal", "name": "Homestead Oxygen Equipment"},
+    "D19": {"status": "Held for renewal", "name": "Homestead Oxygen Equipment"},
+    "D20": {"status": "Held for renewal", "name": "Vosburgh Home Decor"},
+    "E02": {"status": "Held for renewal", "name": "Mercer's Softwash and Power Clean"},
+    "E03": {"status": "Held for renewal", "name": "Creative Metal Works"},
+    "E04": {"status": "Held for renewal", "name": "Crime Stoppers Peterborough Northumberland"},
+    "E05": {"status": "Held for renewal", "name": "Fresh Start Cleaning Northumberland"},
+    "E06": {"status": "Held for renewal", "name": "Mallory Rose Design"},
+    "E09": {"status": "Held for renewal", "name": "Make It Rock"},
+    "E10": {"status": "Held for renewal", "name": "Make It Rock"}
+  };
+  const FACEBOOK_URL = "https://www.facebook.com/NorthumberlandHomeGardenShow";
+  /* Web3Forms access key (free at web3forms.com, created with tommyw@mbcmedia.ca).
+     Paste it between the quotes to send renewal requests automatically.
+     Left empty, the form falls back to "open in email app / copy". */
+  const WEB3FORMS_KEY = "";
+
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+  const esc = s => String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const pad = n => String(n).padStart(2,"0");
+
+  /* ================= Booth model ================= */
+  const ROOM = {w:130, d:101};
+  const Z0 = 10.5;
+  const SECTIONS = [{L:"A",x:14},{L:"B",x:41},{L:"C",x:68},{L:"D",x:95}];
+  const booths = [];
+  SECTIONS.forEach(s=>{
+    for(let i=0;i<10;i++){
+      booths.push({id:s.L+pad(i+1),  sec:"Section "+s.L, x0:s.x,   z0:Z0+i*8, face:"w"});
+      booths.push({id:s.L+pad(20-i), sec:"Section "+s.L, x0:s.x+8, z0:Z0+i*8, face:"e"});
+    }
+  });
+  for(let i=0;i<10;i++) booths.push({id:"E"+pad(i+1), sec:"East wall row", x0:122, z0:Z0+i*8, face:"w"});
+  booths.sort((a,b)=>a.id.localeCompare(b.id));
+  const byId = Object.fromEntries(booths.map(b=>[b.id,b]));
+
+  /* Multi-booth spaces: the same business in booths that touch (side by side, or back to back
+     within a section) is one larger booth. */
+  const posKey = {}; booths.forEach(b=>posKey[b.x0+","+b.z0]=b.id);
+  const nameKey = id => ((VENDORS[id]&&VENDORS[id].name)||"").trim().toLowerCase();
+  function touching(b){
+    const out = [];
+    [8,-8].forEach(dz=>{ const n=posKey[b.x0+","+(b.z0+dz)]; if(n && byId[n].sec===b.sec) out.push({id:n,back:false}); });
+    if(b.sec!=="East wall row"){ const n=posKey[(b.face==="w"?b.x0+8:b.x0-8)+","+b.z0]; if(n && byId[n].sec===b.sec) out.push({id:n,back:true}); }
+    return out;
+  }
+  const groupOf = {};
+  booths.forEach(b=>{
+    const key = nameKey(b.id);
+    if(!key || groupOf[b.id]) return;
+    const ids = [b.id], seen = new Set(ids); let island = false;
+    for(let k=0;k<ids.length;k++) touching(byId[ids[k]]).forEach(n=>{
+      if(nameKey(n.id)!==key) return;
+      if(n.back) island = true;
+      if(!seen.has(n.id)){ seen.add(n.id); ids.push(n.id); }
+    });
+    if(ids.length<2) return;
+    ids.sort();
+    const g = {ids, island, name:VENDORS[b.id].name};
+    const nums = ids.map(i=>+i.slice(1)), sameLetter = ids.every(i=>i[0]===ids[0][0]);
+    const consecutive = sameLetter && nums.every((n,k)=>k===0 || n===nums[k-1]+1);
+    g.label = consecutive ? `${ids[0]}–${ids[ids.length-1]}` : ids.join(" + ");
+    g.size = {2:"Double booth",3:"Triple booth",4:"Quad booth"}[ids.length] || `${ids.length}-booth space`;
+    ids.forEach(i=>groupOf[i]=g);
+  });
+  const mates = id => groupOf[id] ? groupOf[id].ids : [id];
+  const sameSpace = (a,b) => a===b || (!!a && !!groupOf[a] && groupOf[a]===groupOf[b]);
+  const spaceLabel = id => groupOf[id] ? groupOf[id].label : id;
+  const statusOf = id => { const s = ((VENDORS[id] && VENDORS[id].status) || "").toLowerCase(); return s.startsWith("book") ? "booked" : s.startsWith("hold") || s.startsWith("held") ? "hold" : "open"; };
+  const STATUS_LABEL = {open:"Open", hold:"Held for renewal", booked:"Booked"};
+  const hash = s => { let h=2166136261; for(const c of s){ h^=c.charCodeAt(0); h=Math.imul(h,16777619);} return h>>>0; };
+
+  const DOORS = {
+    exits:[{wall:"n",a:7.1,b:15.2},{wall:"n",a:114.2,b:122.2},{wall:"s",a:118.2,b:126.2}],
+    entrances:[{wall:"w",a:6.6,b:17.5},{wall:"w",a:32.5,b:43.5}]
+  };
+
+  const stage = document.getElementById("stage");
+  const tip = document.getElementById("tip");
+  let map = null;
+
+  /* ================= 3D scene ================= */
+  function init3D(){
+    if(!window.THREE) return null;
+    let renderer;
+    try{
+      renderer = new THREE.WebGLRenderer({antialias:true});
+      if(!renderer.getContext()) return null;
+    }catch(e){ return null; }
+    const coarse = matchMedia("(pointer:coarse)").matches;
+    renderer.setPixelRatio(Math.min(devicePixelRatio||1, 2));
+    renderer.shadowMap.enabled = !coarse;
+    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    stage.appendChild(renderer.domElement);
+    const maxAniso = renderer.capabilities.getMaxAnisotropy();
+
+    const scene = new THREE.Scene();
+    const cam = new THREE.PerspectiveCamera(38, 1, 1, 2000);
+    const setBg = () => renderer.setClearColor(new THREE.Color(css("--scene-bg")||"#e3ecdd"));
+    setBg();
+
+    scene.add(new THREE.HemisphereLight(0xffffff, 0xc8c2a8, 0.62));
+    const sun = new THREE.DirectionalLight(0xfff3df, 0.55);
+    sun.position.set(30, 160, 150); sun.target.position.set(65,0,50);
+    sun.castShadow = !coarse;
+    sun.shadow.mapSize.set(2048,2048);
+    Object.assign(sun.shadow.camera, {left:-95,right:95,top:95,bottom:-95,near:20,far:420});
+    sun.shadow.bias = -0.0006;
+    scene.add(sun, sun.target);
+
+    const tex = (w,h,draw) => { const c=document.createElement("canvas"); c.width=w; c.height=h; draw(c.getContext("2d"),w,h); const t=new THREE.CanvasTexture(c); t.anisotropy=maxAniso; return t; };
+    const lam = c => new THREE.MeshLambertMaterial({color:c});
+
+    /* Floor: maple planks + court lines */
+    const S = 10;
+    const floorTex = tex(130*S, 101*S, (g,w,h)=>{
+      g.fillStyle="#d8b27f"; g.fillRect(0,0,w,h);
+      let seed=11; const r=()=>(seed=(seed*16807)%2147483647)/2147483647;
+      for(let y=0;y<h;y+=3){ let x=-r()*80; while(x<w){ const len=40+r()*110; g.fillStyle=`hsl(${31+r()*7},${46+r()*12}%,${67+r()*9}%)`; g.fillRect(x,y,len-1,2.4); x+=len; } }
+      const X=v=>v*S;
+      g.strokeStyle="rgba(170,48,58,.6)"; g.lineWidth=2.2;
+      g.strokeRect(X(18),X(25.5),X(94),X(50));
+      g.beginPath(); g.moveTo(X(65),X(25.5)); g.lineTo(X(65),X(75.5)); g.stroke();
+      g.beginPath(); g.arc(X(65),X(50.5),X(6),0,Math.PI*2); g.stroke();
+      g.fillStyle="rgba(46,122,58,.18)"; g.fillRect(X(18),X(44.5),X(19),X(12)); g.fillRect(X(93),X(44.5),X(19),X(12));
+      g.strokeRect(X(18),X(44.5),X(19),X(12)); g.strokeRect(X(93),X(44.5),X(19),X(12));
+      g.beginPath(); g.arc(X(37),X(50.5),X(6),-Math.PI/2,Math.PI/2); g.stroke();
+      g.beginPath(); g.arc(X(93),X(50.5),X(6),Math.PI/2,Math.PI*1.5); g.stroke();
+      g.beginPath(); g.arc(X(23.25),X(50.5),X(23.75),-1.18,1.18); g.stroke();
+      g.beginPath(); g.arc(X(106.75),X(50.5),X(23.75),Math.PI-1.18,Math.PI+1.18); g.stroke();
+    });
+    const floor = new THREE.Mesh(new THREE.PlaneGeometry(ROOM.w, ROOM.d), new THREE.MeshLambertMaterial({map:floorTex}));
+    floor.rotation.x = -Math.PI/2; floor.position.set(65,0,50.5); floor.receiveShadow = true; scene.add(floor);
+    const outside = new THREE.Mesh(new THREE.PlaneGeometry(600,600), new THREE.ShadowMaterial({opacity:.12}));
+    outside.rotation.x = -Math.PI/2; outside.position.set(65,-0.05,50.5); outside.receiveShadow = true; scene.add(outside);
+
+    /* Walls with door openings */
+    const wallMat = lam(0xeae6dc), capMat = lam(0xcfc8b6);
+    const WH = 4;
+    function box(w,h,d,mat,x,y,z,shadow){ const m=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),mat); m.position.set(x,y,z); if(shadow){m.castShadow=true;} m.receiveShadow=true; scene.add(m); return m; }
+    function wallRun(wall, gaps){
+      const horiz = wall==="n"||wall==="s";
+      const len = horiz ? ROOM.w : ROOM.d;
+      const fixed = {n:-0.6, s:ROOM.d+0.6, w:-0.6, e:ROOM.w+0.6}[wall];
+      const cuts = gaps.slice().sort((p,q)=>p.a-q.a);
+      let start = -1.2;
+      const segs = [];
+      cuts.forEach(c=>{ segs.push([start,c.a]); start=c.b; });
+      segs.push([start, len+1.2]);
+      segs.forEach(([a,b])=>{
+        const L=b-a, mid=(a+b)/2;
+        if(horiz){ box(L,WH,1.2,wallMat,mid,WH/2,fixed,true); box(L,0.3,1.4,capMat,mid,WH+0.15,fixed); }
+        else { box(1.2,WH,L,wallMat,fixed,WH/2,mid,true); box(1.4,0.3,L,capMat,fixed,WH+0.15,mid); }
+      });
+    }
+    const gapsFor = w => [...DOORS.exits, ...DOORS.entrances].filter(d=>d.wall===w);
+    ["n","s","w","e"].forEach(w=>wallRun(w, gapsFor(w)));
+
+    function label(text, bg, fg, x,y,z, wFt){
+      const t = tex(640,140,(g,w,h)=>{
+        g.fillStyle=bg; const rr=34; g.beginPath(); g.moveTo(rr,0); g.arcTo(w,0,w,h,rr); g.arcTo(w,h,0,h,rr); g.arcTo(0,h,0,0,rr); g.arcTo(0,0,w,0,rr); g.fill();
+        g.fillStyle=fg; g.font="700 62px Figtree, Arial, sans-serif"; g.textAlign="center"; g.textBaseline="middle"; g.fillText(text,w/2,h/2+3);
+      });
+      const s = new THREE.Sprite(new THREE.SpriteMaterial({map:t, depthWrite:false}));
+      s.scale.set(wFt, wFt*140/640, 1); s.position.set(x,y,z); scene.add(s); return s;
+    }
+    function decal(w,h,x,z,draw,rot){
+      const t = tex(Math.round(w*40), Math.round(h*40), draw);
+      const m = new THREE.Mesh(new THREE.PlaneGeometry(w,h), new THREE.MeshBasicMaterial({map:t, transparent:true, depthWrite:false}));
+      m.rotation.x = -Math.PI/2; if(rot) m.rotation.z = rot; m.position.set(x,0.13,z); scene.add(m); return m;
+    }
+    const hatch = (g,w,h)=>{ g.strokeStyle="rgba(230,170,20,.85)"; g.lineWidth=10; for(let i=-h;i<w;i+=28){ g.beginPath(); g.moveTo(i,h); g.lineTo(i+h,0); g.stroke(); } g.strokeStyle="rgba(40,40,40,.6)"; g.lineWidth=6; g.strokeRect(3,3,w-6,h-6); };
+
+    const exitMat = lam(0xd23b3b), entMat = lam(0x2e9a4a);
+    DOORS.exits.forEach(d=>{
+      const z = d.wall==="n" ? -0.6 : ROOM.d+0.6, mid=(d.a+d.b)/2, w=d.b-d.a;
+      box(0.6,8,1.4,exitMat,d.a,4,z,true); box(0.6,8,1.4,exitMat,d.b,4,z,true); box(w+0.6,0.9,1.4,exitMat,mid,8.2,z,true);
+      decal(w, 6, mid, d.wall==="n" ? 3.4 : ROOM.d-3.4, hatch);
+      label("EMERGENCY EXIT", "#d23b3b", "#ffffff", mid, 12, d.wall==="n" ? -5 : ROOM.d+5, 15);
+    });
+    DOORS.entrances.forEach(d=>{
+      const mid=(d.a+d.b)/2, w=d.b-d.a;
+      box(1.4,8,0.6,entMat,-0.6,4,d.a,true); box(1.4,8,0.6,entMat,-0.6,4,d.b,true); box(1.4,0.9,w+0.6,entMat,-0.6,8.2,mid,true);
+      box(5,0.08,w-0.6,lam(0x51594f),2.6,0.04,mid);
+      label("ENTRANCE", "#2e7a3a", "#ffffff", -7, 11, mid, 12);
+    });
+
+    /* Section floor labels */
+    const floorText = (txt, color) => (g,w,h)=>{ g.fillStyle=color; g.font=`700 ${Math.round(h*.62)}px Figtree, Arial, sans-serif`; g.textAlign="center"; g.textBaseline="middle"; g.fillText(txt,w/2,h/2+2); };
+    SECTIONS.forEach(s=>decal(14,2.6,s.x+8,7,floorText("SECTION "+s.L,"rgba(29,56,41,.72)")));
+    decal(10,2.6,126,94.5,floorText("ROW E","rgba(29,56,41,.72)"));
+    decal(16,3,7,25,floorText("WELCOME","rgba(46,122,58,.75)"),-Math.PI/2);
+
+    /* Planters along the west wall */
+    const potGeo = new THREE.CylinderGeometry(1.4,1.1,2,16), bushGeo = new THREE.SphereGeometry(1.7,16,12), bloomGeo = new THREE.SphereGeometry(0.42,8,6);
+    const potMat = lam(0xb8674a), bushMat = lam(0x4f9a3c);
+    const bloomMats = [lam(0xe0507a), lam(0xf3c43b), lam(0xffffff), lam(0xf07f5a)];
+    function planter(x,z,seed){
+      const p=new THREE.Mesh(potGeo,potMat); p.position.set(x,1,z); p.castShadow=true; scene.add(p);
+      const b=new THREE.Mesh(bushGeo,bushMat); b.position.set(x,3.1,z); b.scale.set(1,.85,1); b.castShadow=true; scene.add(b);
+      for(let i=0;i<7;i++){ const a=i*0.9+seed, m=new THREE.Mesh(bloomGeo,bloomMats[(i+seed)%4]); m.position.set(x+Math.cos(a)*1.3, 3.4+Math.sin(i*1.7)*.6, z+Math.sin(a)*1.3); scene.add(m); }
+    }
+    [52,64,76,88].forEach((z,i)=>planter(2.4,z,i));
+    planter(2.4,25,5);
+
+    /* Booths */
+    const G = {
+      carpet:new THREE.BoxGeometry(7.84,0.12,7.84), back:new THREE.BoxGeometry(8,8,0.18), side:new THREE.BoxGeometry(0.12,3,8),
+      rail:new THREE.CylinderGeometry(0.07,0.07,8,6), frame:new THREE.BoxGeometry(6.8,1.9,0.16), sign:new THREE.PlaneGeometry(6.4,1.6),
+      table:new THREE.BoxGeometry(6,2.5,2.5), pot:new THREE.CylinderGeometry(0.5,0.38,0.9,12), bush:new THREE.SphereGeometry(0.75,12,8),
+      bloom:new THREE.SphereGeometry(0.22,6,5), pole:new THREE.CylinderGeometry(0.06,0.06,6.4,6), canopy:new THREE.ConeGeometry(2,1,10),
+      shelf:new THREE.BoxGeometry(2.4,4.8,1.1), prod:new THREE.BoxGeometry(0.62,0.62,0.62), banner:new THREE.BoxGeometry(2,6.2,0.12),
+      tub:new THREE.BoxGeometry(5.6,2.8,5.6), water:new THREE.PlaneGeometry(4.7,4.7), decal:new THREE.PlaneGeometry(3,1.5),
+      chair:new THREE.BoxGeometry(1.1,1.6,1.1)
+    };
+    const M = {
+      back:lam(0x4d6d5f), side:lam(0x6c8b7c), rail:lam(0xc9ced1), frame:lam(0x2f3b35),
+      cloths:[0xffffff,0xf6d3dd,0xd5ebcc,0xfbe6a2,0xcfe3ef,0xe8dcf3].map(lam),
+      pot:lam(0xb8674a), bush:lam(0x56a043), blooms:[0xe0507a,0xf3c43b,0xffffff,0xc86bd1].map(lam),
+      pole:lam(0xe0e0e0), canopies:[0xe0507a,0xf3c43b,0x5aa7d6,0x2e9a4a,0xf07f5a].map(lam),
+      wood:lam(0xc9a47a), prods:[0xe0507a,0x5aa7d6,0xf3c43b,0x2e9a4a,0xffffff].map(lam),
+      banners:[0x2e7a3a,0xd6436d,0x3f7fb0,0xf2a93b].map(lam), tub:lam(0x7a5b46), water:lam(0x63c5e0), chair:lam(0xf4f4f4)
+    };
+    const carpetColor = {open:0x8cc865, hold:0xf2c94c, booked:0x9eadb7};
+    const COL = {sel:new THREE.Color(0xe0507a), match:new THREE.Color(0xf7a6c0)};
+    const N = booths.length;
+    const carpets = new THREE.InstancedMesh(G.carpet, lam(0xffffff), N);
+    carpets.receiveShadow = true;
+    const pickBoxes = new THREE.InstancedMesh(new THREE.BoxGeometry(8,8.6,8), new THREE.MeshBasicMaterial(), N);
+    pickBoxes.visible = false;
+    const idx = {}, objs = {};
+    const tmp = new THREE.Object3D();
+
+    /* Sign + floor-number atlases (one texture each) */
+    const SC = 8, SR = Math.ceil(N/SC), SW = 512, SH = 128;
+    const DC = 10, DR = Math.ceil(N/DC), DW = 120, DH = 60;
+    const signCv = document.createElement("canvas"); signCv.width = SC*SW; signCv.height = SR*SH;
+    const decCv = document.createElement("canvas"); decCv.width = DC*DW; decCv.height = DR*DH;
+    const sg = signCv.getContext("2d"), dg = decCv.getContext("2d");
+    function drawSign(b,i){
+      const st = statusOf(b.id), v = VENDORS[b.id]||{};
+      const ox = (i%SC)*SW, oy = Math.floor(i/SC)*SH;
+      sg.save(); sg.translate(ox,oy);
+      sg.fillStyle = {open:"#2e7a3a", hold:"#f2c232", booked:"#ffffff"}[st]; sg.fillRect(0,0,SW,SH);
+      sg.fillStyle = st==="open" ? "#ffffff" : "#1d3829"; sg.textBaseline="middle"; sg.textAlign="left";
+      sg.font="600 58px 'IBM Plex Mono', Menlo, monospace"; sg.fillText(b.id,22,SH/2+3);
+      sg.globalAlpha=.35; sg.fillRect(146,24,3,SH-48); sg.globalAlpha=1;
+      let name = v.name || (st==="hold" ? "Held for renewal" : st==="booked" ? "Booked" : "Available");
+      let size = 44; sg.font=`700 ${size}px Figtree, Arial, sans-serif`;
+      while(sg.measureText(name).width > 330 && size>24){ size-=2; sg.font=`700 ${size}px Figtree, Arial, sans-serif`; }
+      if(sg.measureText(name).width > 330){ while(sg.measureText(name+"…").width>330) name=name.slice(0,-1); name+="…"; }
+      sg.fillText(name,166,SH/2+2);
+      sg.restore();
+      const dx = (i%DC)*DW, dy = Math.floor(i/DC)*DH;
+      dg.fillStyle="rgba(29,56,41,.82)"; dg.font="600 40px 'IBM Plex Mono', Menlo, monospace"; dg.textAlign="center"; dg.textBaseline="middle";
+      dg.fillText(b.id, dx+DW/2, dy+DH/2+2);
+    }
+    function atlasUV(geo, i, cols, rows){
+      const g = geo.clone(), uv = g.attributes.uv, c = i%cols, r = Math.floor(i/cols);
+      for(let k=0;k<uv.count;k++) uv.setXY(k, (c+uv.getX(k))/cols, 1-(r+1)/rows + uv.getY(k)/rows);
+      return g;
+    }
+
+    /* Static booth furniture is merged by material to keep draw calls low */
+    const buckets = new Map();
+    const bucket = (mat, geo) => { if(!buckets.has(mat)) buckets.set(mat, []); buckets.get(mat).push(geo); };
+    function bake(mesh){
+      mesh.updateMatrixWorld(true);
+      const g = (mesh.geometry.index ? mesh.geometry.toNonIndexed() : mesh.geometry.clone());
+      g.applyMatrix4(mesh.matrixWorld);
+      bucket(mesh.material, g);
+    }
+    function mergeGeos(geos){
+      let n=0; geos.forEach(g=>n+=g.attributes.position.count);
+      const pos=new Float32Array(n*3), nor=new Float32Array(n*3), uv=new Float32Array(n*2); let o=0;
+      geos.forEach(g=>{ const c=g.attributes.position.count; pos.set(g.attributes.position.array,o*3); nor.set(g.attributes.normal.array,o*3); if(g.attributes.uv) uv.set(g.attributes.uv.array,o*2); o+=c; });
+      const m = new THREE.BufferGeometry();
+      m.setAttribute("position", new THREE.BufferAttribute(pos,3));
+      m.setAttribute("normal", new THREE.BufferAttribute(nor,3));
+      m.setAttribute("uv", new THREE.BufferAttribute(uv,2));
+      return m;
+    }
+
+    function buildBooth(b,i){
+      const grp = new THREE.Group();
+      const cx=b.x0+4, cz=b.z0+4;
+      grp.position.set(cx,0,cz);
+      grp.rotation.y = b.face==="w" ? -Math.PI/2 : Math.PI/2;
+      const add = (geo,mat,x,y,z) => { const m=new THREE.Mesh(geo,mat); m.position.set(x,y,z); grp.add(m); return m; };
+      const g = groupOf[b.id], inG = n => !!n && !!g && groupOf[n]===g;
+      const backN = b.sec!=="East wall row" ? posKey[(b.face==="w"?b.x0+8:b.x0-8)+","+b.z0] : null;
+      if(!inG(backN)){
+        add(G.back, M.back, 0,4,-3.91);
+        const rail = add(G.rail, M.rail, 0,8.05,-3.91); rail.rotation.z = Math.PI/2;
+      }
+      [-1,1].forEach(sx=>{
+        const dz = (b.face==="w" ? sx : -sx)*8, n = posKey[b.x0+","+(b.z0+dz)];
+        if(!(inG(n) && byId[n].sec===b.sec)) add(G.side, M.side, sx*3.94,1.5,0);
+      });
+      if(!g){
+        add(G.frame, M.frame, 0,7.25,-3.74);
+        add(atlasUV(G.sign,i,SC,SR), M.sign, 0,7.25,-3.65);
+      }
+      const h = hash(b.id), v = h % 6, side = (h>>4)&1 ? 1 : -1;
+      if(v===5){
+        add(G.tub, M.tub, 0,1.4,-0.4);
+        const w = add(G.water, M.water, 0,2.82,-0.4); w.rotation.x=-Math.PI/2;
+      } else {
+        add(G.table, M.cloths[(h>>3)%M.cloths.length], ((h>>6)%3-1)*0.4,1.25,-2.3);
+        for(let k=0;k<3;k++) add(G.prod, M.prods[(h>>(k+2))%5], -1.8+k*1.6+((h>>9)%2)*0.3,2.81,-2.3);
+        if(v===0){
+          for(let k=0;k<3;k++){ const px=side*(2.6-k*0.2), pz=2.6-k*1.1; add(G.pot,M.pot,px,0.45,pz); add(G.bush,M.bush,px,1.4,pz);
+            for(let j=0;j<4;j++){ const a=j*1.57+k; add(G.bloom,M.blooms[(h+j+k)%4],px+Math.cos(a)*.55,1.6+Math.sin(j)*.25,pz+Math.sin(a)*.55); } }
+        } else if(v===1){
+          add(G.pole,M.pole,side*1.9,3.2,1.6);
+          add(G.canopy,M.canopies[(h>>5)%5],side*1.9,6.3,1.6);
+          add(G.chair,M.chair,side*1.0,0.8,1.0); add(G.chair,M.chair,side*2.8,0.8,2.3);
+        } else if(v===2){
+          add(G.shelf,M.wood,side*2.5,2.4,2.2);
+          for(let r=0;r<3;r++) add(G.prod,M.prods[(h+r)%5],side*2.5,1.2+r*1.3,1.5);
+        } else if(v===3){
+          add(G.banner,M.banners[(h>>7)%4],side*2.7,3.1,2.6);
+        } else {
+          add(G.pot,M.pot,side*2.8,0.45,2.8); add(G.bush,M.bush,side*2.8,1.4,2.8);
+        }
+      }
+      grp.updateMatrixWorld(true);
+      grp.children.forEach(bake);
+      // number painted near the booth front, always reading north-up
+      const dm = new THREE.Mesh(atlasUV(G.decal,i,DC,DR), M.decal);
+      dm.rotation.x=-Math.PI/2; dm.position.set(cx + (b.face==="w" ? -2.2 : 2.2),0.14,cz);
+      bake(dm);
+      const cs = groupOf[b.id] ? 8.02/7.84 : 1;
+      tmp.position.set(cx,0.06,cz); tmp.scale.set(cs,1,cs); tmp.updateMatrix(); carpets.setMatrixAt(i,tmp.matrix); tmp.scale.set(1,1,1);
+      tmp.position.set(cx,4.3,cz); tmp.updateMatrix(); pickBoxes.setMatrixAt(i,tmp.matrix);
+      idx[b.id] = i; objs[b.id] = {cx, cz};
+    }
+    booths.forEach(drawSign);
+    const signTex = new THREE.CanvasTexture(signCv), decTex = new THREE.CanvasTexture(decCv);
+    signTex.anisotropy = decTex.anisotropy = maxAniso;
+    M.sign = new THREE.MeshBasicMaterial({map:signTex});
+    M.decal = new THREE.MeshBasicMaterial({map:decTex, transparent:true, depthWrite:false});
+    booths.forEach(buildBooth);
+    buckets.forEach((geos,mat)=>{
+      const m = new THREE.Mesh(mergeGeos(geos), mat);
+      const flatOnly = mat===M.decal || mat===M.sign;
+      m.castShadow = !flatOnly; m.receiveShadow = mat!==M.decal && mat!==M.sign;
+      if(mat===M.decal) m.renderOrder = 2;
+      scene.add(m);
+    });
+    scene.add(carpets, pickBoxes);
+
+    /* One sign per multi-booth space */
+    const groupsDone = new Set();
+    booths.forEach(b=>{
+      const g = groupOf[b.id]; if(!g || groupsDone.has(g)) return; groupsDone.add(g);
+      const ms = g.ids.map(id=>byId[id]);
+      const minX = Math.min(...ms.map(m=>m.x0)), maxX = Math.max(...ms.map(m=>m.x0+8));
+      const minZ = Math.min(...ms.map(m=>m.z0)), maxZ = Math.max(...ms.map(m=>m.z0+8));
+      g.cx = (minX+maxX)/2; g.cz = (minZ+maxZ)/2;
+      const st = statusOf(g.ids[0]);
+      const w = g.island ? Math.min(13, Math.max(maxX-minX, maxZ-minZ) - 1.5) : (maxZ-minZ) - 1.6, h = 1.6;
+      const cw = Math.round(128*w/h), c = document.createElement("canvas"); c.width = cw; c.height = 128;
+      const x = c.getContext("2d");
+      x.fillStyle = {open:"#2e7a3a", hold:"#f2c232", booked:"#ffffff"}[st]; x.fillRect(0,0,cw,128);
+      x.fillStyle = st==="open" ? "#ffffff" : "#1d3829"; x.textBaseline = "middle";
+      x.font = "600 46px 'IBM Plex Mono', Menlo, monospace"; x.fillText(g.label, 24, 66);
+      const lw = x.measureText(g.label).width + 48;
+      x.globalAlpha=.35; x.fillRect(lw,24,3,80); x.globalAlpha=1;
+      let name = g.name, size = 56, room = cw - lw - 40;
+      x.font = `700 ${size}px Figtree, Arial, sans-serif`;
+      while(x.measureText(name).width > room && size>26){ size-=2; x.font=`700 ${size}px Figtree, Arial, sans-serif`; }
+      if(x.measureText(name).width > room){ while(name.length>1 && x.measureText(name+"…").width>room) name=name.slice(0,-1); name+="…"; }
+      x.fillText(name, lw+20, 66);
+      const t = new THREE.CanvasTexture(c); t.anisotropy = maxAniso;
+      const sm = new THREE.MeshBasicMaterial({map:t, side:THREE.DoubleSide});
+      const holder = new THREE.Group();
+      const frame = new THREE.Mesh(new THREE.BoxGeometry(w+0.4, h+0.3, 0.16), M.frame);
+      const front = new THREE.Mesh(new THREE.PlaneGeometry(w,h), sm); front.position.z = 0.09;
+      holder.add(frame, front);
+      if(g.island){
+        const back = new THREE.Mesh(new THREE.PlaneGeometry(w,h), sm); back.position.z = -0.09; back.rotation.y = Math.PI;
+        holder.add(back);
+        [-1,1].forEach(s=>{ const wire = new THREE.Mesh(new THREE.CylinderGeometry(0.04,0.04,5,4), M.rail); wire.position.set(s*(w/2-0.4), h/2+2.5, 0); holder.add(wire); });
+        holder.position.set(g.cx, 11.5, g.cz);
+        if(maxX-minX > maxZ-minZ) holder.rotation.y = 0; else holder.rotation.y = Math.PI/2;
+        if(maxX-minX === maxZ-minZ) holder.rotation.y = 0;
+      } else {
+        const f = ms[0].face;
+        holder.position.set(f==="w" ? minX+8-0.32 : minX+0.32, 7.25, g.cz);
+        holder.rotation.y = f==="w" ? -Math.PI/2 : Math.PI/2;
+      }
+      frame.castShadow = true;
+      scene.add(holder);
+    });
+
+    /* Visitors */
+    const people = [];
+    const legGeo = new THREE.CylinderGeometry(0.42,0.42,2.6,8), bodyGeo = new THREE.CylinderGeometry(0.62,0.78,2.4,10), headGeo = new THREE.SphereGeometry(0.48,12,10);
+    const legMat = lam(0x3b4552), skins=[0xf1c9a5,0xd9a27a,0x9c6a48,0x6b4430].map(lam);
+    const shirts = [0xe0507a,0x5aa7d6,0xf3c43b,0x2e9a4a,0xffffff,0xf07f5a,0x8a6fd1,0x274b6d].map(lam);
+    const lanesV = [7,35.5,62.5,89.5,116.5], lanesH = [5,96];
+    let ps = 99;
+    const pr = () => (ps=(ps*16807)%2147483647)/2147483647;
+    for(let i=0;i<26;i++){
+      const g = new THREE.Group();
+      const leg = new THREE.Mesh(legGeo,legMat); leg.position.y=1.3;
+      const body = new THREE.Mesh(bodyGeo, shirts[i%shirts.length]); body.position.y=3.8;
+      const head = new THREE.Mesh(headGeo, skins[i%4]); head.position.y=5.5;
+      [leg,body,head].forEach(m=>{m.castShadow=true; g.add(m);});
+      const vert = i < 20;
+      const lane = vert ? lanesV[i%lanesV.length] : lanesH[i%2];
+      const p = {g, vert, lane, off:(pr()-.5)*5, t: vert ? 8+pr()*84 : 6+pr()*118, sp:(1.6+pr()*1.8)*(pr()<.5?-1:1), min: vert?8:6, max: vert?93:124};
+      people.push(p); scene.add(g);
+    }
+    function placePeople(dt){
+      people.forEach(p=>{
+        if(dt){ p.t += p.sp*dt; if(p.t>p.max||p.t<p.min){ p.sp*=-1; p.t=Math.max(p.min,Math.min(p.max,p.t)); } }
+        if(p.vert) p.g.position.set(p.lane+p.off,0,p.t); else p.g.position.set(p.t,0,p.lane+p.off);
+      });
+    }
+    placePeople(0);
+
+    /* Selection pin */
+    const pin = new THREE.Group();
+    const pinMat = new THREE.MeshLambertMaterial({color:0xe0507a, emissive:0x5a0f24});
+    const cone = new THREE.Mesh(new THREE.ConeGeometry(0.9,2.4,16), pinMat); cone.rotation.x=Math.PI; cone.position.y=1.2;
+    const ball = new THREE.Mesh(new THREE.SphereGeometry(1.15,18,14), pinMat); ball.position.y=3;
+    pin.add(cone,ball); pin.visible=false; scene.add(pin);
+
+    /* Camera */
+    const DEF = {theta:-0.42, phi:0.9};
+    const goal = {theta:DEF.theta, phi:DEF.phi, z:1, tx:65, tz:50.5};
+    const cur = reduce ? {...goal} : {theta:goal.theta-0.9, phi:0.35, z:1.6, tx:65, tz:50.5};
+    let flat = false;
+    function fitDist(){
+      const vf = cam.fov*Math.PI/180, hf = 2*Math.atan(Math.tan(vf/2)*cam.aspect);
+      return Math.max((ROOM.w/2+10)/Math.tan(hf/2)*1.3, (ROOM.d/2+12)/Math.tan(vf/2)*0.92);
+    }
+    const compass = document.getElementById("compass");
+    function placeCam(){
+      const r = fitDist()*cur.z, ph = Math.max(0.001,cur.phi);
+      cam.position.set(cur.tx + r*Math.sin(ph)*Math.sin(cur.theta), r*Math.cos(ph), cur.tz + r*Math.sin(ph)*Math.cos(cur.theta));
+      if(ph < 0.01) cam.up.set(-Math.sin(cur.theta),0,-Math.cos(cur.theta)); else cam.up.set(0,1,0);
+      cam.lookAt(cur.tx,0,cur.tz);
+      compass.style.transform = `rotate(${cur.theta}rad)`;
+    }
+
+    function resize(){
+      const w = stage.clientWidth, h = stage.clientHeight;
+      renderer.setSize(w,h,false); cam.aspect = w/h; cam.updateProjectionMatrix(); dirty = true;
+    }
+    let dirty = true;
+    new ResizeObserver(resize).observe(stage);
+
+    /* Interaction */
+    const ray = new THREE.Raycaster(), ndc = new THREE.Vector2();
+    function hit(cx,cy){
+      const rc = renderer.domElement.getBoundingClientRect();
+      ndc.set(((cx-rc.left)/rc.width)*2-1, -((cy-rc.top)/rc.height)*2+1);
+      ray.setFromCamera(ndc, cam);
+      const h = ray.intersectObject(pickBoxes, false)[0];
+      return h ? booths[h.instanceId].id : null;
+    }
+    const pts = new Map(); let drag = null, moved = false, active = false, hovered = null, pinch = null;
+    const el = renderer.domElement;
+    el.addEventListener("contextmenu", e=>e.preventDefault());
+    el.addEventListener("pointerdown", e=>{
+      active = true;
+      pts.set(e.pointerId,{x:e.clientX,y:e.clientY});
+      try{ el.setPointerCapture(e.pointerId); }catch(_){}
+      if(pts.size===1){ drag = {x:e.clientX, y:e.clientY, pan: e.button===2 || e.shiftKey}; moved=false; }
+      if(pts.size===2){ const [a,b]=[...pts.values()]; pinch={d:Math.hypot(a.x-b.x,a.y-b.y), z:goal.z}; moved=true; }
+    });
+    el.addEventListener("pointermove", e=>{
+      if(pts.has(e.pointerId)) pts.set(e.pointerId,{x:e.clientX,y:e.clientY});
+      if(pinch && pts.size===2){ const [a,b]=[...pts.values()]; const d=Math.hypot(a.x-b.x,a.y-b.y); goal.z=Math.max(.28,Math.min(1.8,pinch.z*pinch.d/d)); return; }
+      if(drag){
+        const dx=e.clientX-drag.x, dy=e.clientY-drag.y;
+        if(!moved && Math.hypot(dx,dy)>5){ moved=true; stage.classList.add("dragging"); tip.hidden=true; }
+        if(moved){
+          drag.x=e.clientX; drag.y=e.clientY;
+          if(drag.pan){
+            const k = fitDist()*goal.z*0.0016, th=cur.theta;
+            goal.tx -= (Math.cos(th)*dx - Math.sin(th)*dy)*k;
+            goal.tz -= (-Math.sin(th)*dx - Math.cos(th)*dy)*k;
+            goal.tx=Math.max(0,Math.min(ROOM.w,goal.tx)); goal.tz=Math.max(0,Math.min(ROOM.d,goal.tz));
+          } else {
+            if(flat){ flat=false; goal.phi=DEF.phi; vt.textContent="Top view"; }
+            goal.theta -= dx*0.006;
+            if(e.pointerType==="mouse") goal.phi = Math.max(0.3, Math.min(1.25, goal.phi - dy*0.004));
+          }
+        }
+        return;
+      }
+      if(e.pointerType==="mouse"){
+        const id = hit(e.clientX,e.clientY);
+        if(id!==hovered){ const old=hovered; hovered=id; if(old) mates(old).forEach(visual); if(id) mates(id).forEach(visual); dirty=true; }
+        stage.classList.toggle("over", !!id);
+        if(id){
+          const rc=stage.getBoundingClientRect(), v=VENDORS[id];
+          tip.innerHTML = `<b>${spaceLabel(id)}</b> · ${v&&v.name?esc(v.name):STATUS_LABEL[statusOf(id)]}`;
+          tip.style.left=(e.clientX-rc.left)+"px"; tip.style.top=(e.clientY-rc.top)+"px"; tip.hidden=false;
+        } else tip.hidden=true;
+      }
+    });
+    const end = e=>{
+      const wasTap = drag && !moved && pts.size===1;
+      pts.delete(e.pointerId);
+      if(pts.size<2) pinch=null;
+      if(wasTap && e.type==="pointerup"){ const id=hit(e.clientX,e.clientY); if(id) select(id); }
+      if(pts.size===0){ drag=null; stage.classList.remove("dragging"); }
+    };
+    el.addEventListener("pointerup", end);
+    el.addEventListener("pointercancel", end);
+    el.addEventListener("pointerleave", ()=>{ active=false; if(hovered){const o=hovered; hovered=null; visual(o);} tip.hidden=true; stage.classList.remove("over"); });
+    el.addEventListener("wheel", e=>{
+      if(!active && !e.ctrlKey) return;
+      e.preventDefault();
+      goal.z = Math.max(.28, Math.min(1.8, goal.z*Math.exp(e.deltaY*0.0012)));
+    }, {passive:false});
+
+    const vt = document.getElementById("viewToggle");
+    document.getElementById("rotL").onclick=()=>{ goal.theta += Math.PI/4; };
+    document.getElementById("rotR").onclick=()=>{ goal.theta -= Math.PI/4; };
+    document.getElementById("zoomIn").onclick=()=>{ goal.z=Math.max(.28,goal.z/1.3); };
+    document.getElementById("zoomOut").onclick=()=>{ goal.z=Math.min(1.8,goal.z*1.3); };
+    vt.onclick=()=>{ flat=!flat; goal.phi = flat ? 0 : DEF.phi; if(flat) goal.theta = Math.round(goal.theta/(Math.PI/2))*(Math.PI/2); vt.textContent = flat ? "3D view" : "Top view"; };
+    document.getElementById("reset").onclick=()=>{ flat=false; vt.textContent="Top view"; Object.assign(goal,{theta:DEF.theta,phi:DEF.phi,z:1,tx:65,tz:50.5}); };
+
+    let matches = null, selId = null, pinBase = 9;
+    function visual(id){
+      const i = idx[id]; if(i===undefined) return;
+      const base = new THREE.Color(carpetColor[statusOf(id)]);
+      const c = sameSpace(id,selId) ? COL.sel : (matches && matches.has(id)) ? COL.match : sameSpace(id,hovered) ? base.lerp(new THREE.Color(0xffffff),.4) : base;
+      carpets.setColorAt(i, c); carpets.instanceColor.needsUpdate = true;
+    }
+
+    /* Loop */
+    let visible = true, last = performance.now();
+    new IntersectionObserver(es=>{ visible = es[0].isIntersecting; if(visible){ last=performance.now(); requestAnimationFrame(tick);} }).observe(stage);
+    function tick(now){
+      if(!visible) return;
+      const dt = Math.min(0.05,(now-last)/1000); last = now;
+      const k = reduce ? 1 : 1 - Math.pow(0.0015, dt);
+      for(const key of ["theta","phi","z","tx","tz"]) cur[key] += (goal[key]-cur[key])*k;
+      placeCam();
+      if(!reduce) placePeople(dt);
+      if(pin.visible) pin.position.y = pinBase + (reduce?0:Math.sin(now/300)*0.6);
+      renderer.render(scene, cam);
+      requestAnimationFrame(tick);
+    }
+    booths.forEach(b=>visual(b.id));
+    resize(); requestAnimationFrame(tick);
+
+    window.addEventListener("themechange-internal", setBg);
+
+    return {
+      select(id){
+        const prev = selId; selId = id;
+        if(prev) mates(prev).forEach(visual);
+        if(id){
+          mates(id).forEach(visual);
+          const g = groupOf[id], o = g || objs[id];
+          pin.position.set(o.cx,9,o.cz); pin.visible=true; pinBase = g && g.island ? 15 : 9;
+          goal.tx=o.cx; goal.tz=o.cz; goal.z=Math.min(goal.z,.55);
+        } else pin.visible=false;
+      },
+      setMatches(set){ const old=matches; matches=set; booths.forEach(b=>visual(b.id)); }
+    };
+  }
+
+  /* ================= 2D fallback ================= */
+  function init2D(){
+    document.getElementById("hint").textContent = "Showing a flat plan. Tap a booth for details.";
+    document.querySelectorAll(".controls,.compass").forEach(e=>e.hidden=true);
+    const fill = {open:"var(--st-open)",hold:"var(--st-hold)",booked:"var(--st-booked)"};
+    let s = `<svg viewBox="-8 -8 146 117" role="img" aria-label="Gymnasium floor plan"><rect x="0" y="0" width="130" height="101" fill="#e3c69a" stroke="var(--ink)" stroke-width="1"/>`;
+    DOORS.exits.forEach(d=>{ const y=d.wall==="n"?-1.2:100.2; s+=`<rect x="${d.a}" y="${y}" width="${d.b-d.a}" height="2" fill="#d23b3b"/>`; });
+    DOORS.entrances.forEach(d=>{ s+=`<rect x="-1.2" y="${d.a}" width="2" height="${d.b-d.a}" fill="#2e9a4a"/>`; });
+    booths.forEach(b=>{ s+=`<g data-id="${b.id}" style="cursor:pointer"><rect x="${b.x0+.15}" y="${b.z0+.15}" width="7.7" height="7.7" rx=".6" fill="${fill[statusOf(b.id)]}" stroke="#1d3829" stroke-width=".25"/><text x="${b.x0+4}" y="${b.z0+4.9}" font-size="2.6" text-anchor="middle" font-family="IBM Plex Mono, monospace" fill="#1d3829">${b.id}</text></g>`; });
+    s += `</svg>`;
+    stage.innerHTML = s;
+    stage.style.touchAction="auto";
+    stage.querySelectorAll("g[data-id]").forEach(g=>g.addEventListener("click",()=>select(g.dataset.id)));
+    return {
+      select(id){ stage.querySelectorAll("g[data-id] rect").forEach(r=>{ const gid=r.parentNode.dataset.id; r.setAttribute("fill", gid===id ? "var(--tulip)" : fill[statusOf(gid)]); }); },
+      setMatches(set){ stage.querySelectorAll("g[data-id] rect").forEach(r=>{ const gid=r.parentNode.dataset.id; r.setAttribute("stroke-width", set && set.has(gid) ? "1" : ".25"); r.setAttribute("stroke", set && set.has(gid) ? "var(--tulip)" : "#1d3829"); }); }
+    };
+  }
+
+  function start(){
+    map = init3D() || init2D();
+  }
+  const fontsReady = document.fonts ? Promise.race([document.fonts.ready, new Promise(r=>setTimeout(r,1500))]) : Promise.resolve();
+  fontsReady.then(start);
+
+
+  /* Theme changes */
+  const fire = () => window.dispatchEvent(new Event("themechange-internal"));
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", fire);
+  new MutationObserver(fire).observe(document.documentElement, {attributes:true, attributeFilter:["data-theme"]});
+
+  /* ================= Panel ================= */
+  const panel = document.getElementById("panel");
+  let sel = null;
+  function overview(){
+    const c = {open:0,hold:0,booked:0};
+    booths.forEach(b=>c[statusOf(b.id)]++);
+    panel.innerHTML = `<div class="eyebrow">Gymnasium</div>
+      <h3 style="margin-top:6px">Find your spot</h3>
+      <p class="muted" style="margin-top:6px">Tap a booth on the floor to see its details. Every booth has power included.</p>
+      <div class="counts">
+        <div style="background:var(--st-open)"><b>${c.open}</b><span>Open</span></div>
+        <div style="background:var(--st-hold)"><b>${c.hold}</b><span>Held</span></div>
+        <div style="background:var(--st-booked)"><b>${c.booked}</b><span>Booked</span></div>
+      </div>`;
+  }
+  function select(id){
+    sel = id;
+    if(map) map.select(id);
+    if(!id){ overview(); return; }
+    const b = byId[id], st = statusOf(id), v = VENDORS[id]||{};
+    let body = `<div style="display:flex;justify-content:space-between;align-items:start;gap:10px">
+        <div><div class="eyebrow">Gymnasium · ${b.sec}</div><div class="booth-id" style="margin-top:8px;${groupOf[id]?"font-size:34px;white-space:nowrap":""}">${spaceLabel(id)}</div></div>
+        <span class="pill ${st}">${STATUS_LABEL[st]}</span></div>`;
+    if(v.name){
+      body += `<h3 style="margin-top:14px;font-size:22px">${esc(v.name)}</h3>`;
+      if(v.category) body += `<p class="muted" style="margin-top:4px">${esc(v.category)}</p>`;
+      if(v.website) body += `<p style="margin-top:6px"><a href="${esc(v.website)}" target="_blank" rel="noopener">Visit website</a></p>`;
+    }
+    const g = groupOf[id];
+    const faces = g ? [...new Set(g.ids.map(i=>byId[i].face))] : [b.face];
+    body += `<dl class="kv">${g?`<dt>Space</dt><dd>${g.size}</dd>`:""}<dt>Room</dt><dd>Gymnasium</dd><dt>Faces</dt><dd>${faces.length>1?"West and east aisles":faces[0]==="w"?"West aisle":"East aisle"}</dd><dt>Power</dt><dd>Included</dd></dl>`;
+    if(st==="open") body += `<p class="muted" style="margin-top:14px">This booth is open. Mention ${id} on the renewal form. Full payment by Wednesday, December 23 at 5 PM confirms a booth.</p><a class="btn" href="#renew" style="margin-top:12px;width:100%">Renew my booth</a>`;
+    else if(st==="hold") body += `<p class="muted" style="margin-top:14px">Held for a returning vendor. Full payment by Wednesday, December 23 at 5 PM confirms it. Unpaid booths may be opened to our waitlist.</p><a class="btn" href="#renew" style="margin-top:12px;width:100%">Renew my booth</a>`;
+    else body += `<p class="muted" style="margin-top:14px">This booth is taken. Pick an open green booth instead.</p>`;
+    body += `<button class="btn ghost" id="clearSel" style="margin-top:8px;width:100%;border-color:var(--line);color:var(--muted)">Back to overview</button>`;
+    panel.innerHTML = body;
+    document.getElementById("clearSel").onclick = ()=>select(null);
+  }
+  overview();
+
+  /* ================= Search ================= */
+  const q = document.getElementById("q"), results = document.getElementById("results");
+  q.addEventListener("input", ()=>{
+    const term = q.value.trim().toLowerCase();
+    results.innerHTML = "";
+    if(!term){ map && map.setMatches(null); return; }
+    const hits = booths.filter(b=>{ const v=VENDORS[b.id]||{}; return b.id.toLowerCase().includes(term) || (v.name||"").toLowerCase().includes(term) || (v.category||"").toLowerCase().includes(term); });
+    map && map.setMatches(new Set(hits.map(h=>h.id)));
+    if(!hits.length){
+      results.innerHTML = `<li class="muted" style="padding:6px">${Object.keys(VENDORS).length ? "No vendors match that search." : "No match. Vendor names appear here as bookings are confirmed."}</li>`;
+      return;
+    }
+    const shown = new Set();
+    hits.filter(b=>{ const k = groupOf[b.id] || b.id; if(shown.has(k)) return false; shown.add(k); return true; }).slice(0,40).forEach(b=>{
+      const v = VENDORS[b.id], li = document.createElement("li");
+      li.innerHTML = `<button type="button"><b style="font-family:var(--f-mono)">${spaceLabel(b.id)}</b> · ${v&&v.name?esc(v.name):STATUS_LABEL[statusOf(b.id)]}</button>`;
+      li.firstChild.onclick = ()=>select(b.id);
+      results.appendChild(li);
+    });
+  });
+
+  /* ================= Renewal form ================= */
+  const form = document.getElementById("form"), ADDR = "tommyw@mbcmedia.ca";
+  const guideBox = document.getElementById("guideAd");
+  document.getElementById("guideCta").addEventListener("click", ()=>{
+    guideBox.checked = true;
+    setTimeout(()=>document.getElementById("biz").focus({preventScroll:true}), 600);
+  });
+  const checks = {
+    biz: v=>v?"":"Enter your business name.",
+    contact: v=>v?"":"Enter the name of the person we should contact.",
+    phone: v=>v.replace(/\D/g,"").length>=10?"":"Enter a 10-digit phone number, including area code.",
+    email: v=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)?"":"Enter an email address like name@business.ca."
+  };
+  let summaryText = "";
+  form.addEventListener("submit", e=>{
+    e.preventDefault();
+    let firstBad = null;
+    for(const k in checks){
+      const el = document.getElementById(k), msg = checks[k](el.value.trim());
+      document.getElementById(k+"-err").textContent = msg;
+      el.setAttribute("aria-invalid", msg?"true":"false");
+      if(msg && !firstBad) firstBad = el;
+    }
+    if(firstBad){ firstBad.focus(); return; }
+    const val = k=>document.getElementById(k).value.trim();
+    summaryText =
+`Booth renewal request
+Northumberland Home, Garden & Leisure Show
+April 9-11, 2027 - Cobourg Community Centre
+
+Business name: ${val("biz")}
+Contact name: ${val("contact")}
+Phone: ${val("phone")}
+Email: ${val("email")}
+
+I'd like to renew my booth and get more information, including pricing.
+2027 Guide Book ad: ${guideBox.checked ? "Yes, include my business (business-card size, $299 home show special, payment due Feb 26, 2027)" : "No, not this year"}
+
+I understand this request does not reserve my booth. Full payment by Wednesday, December 23 at 5 PM confirms it.`;
+    document.getElementById("summary").textContent = summaryText;
+    const subject = `Booth renewal: ${val("biz")} - Northumberland Home, Garden & Leisure Show 2027`;
+    document.getElementById("mailLink").href = `mailto:${ADDR}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(summaryText)}`;
+    const showFallback = (failed)=>{
+      if(failed) document.getElementById("sentMsg").innerHTML = "<b>We couldn't send it automatically.</b> Open your email app to send this request, or copy it into an email to <b>tommyw@mbcmedia.ca</b>.";
+      const sent = document.getElementById("sent"); sent.hidden = false;
+      sent.scrollIntoView({behavior: reduce?"auto":"smooth", block:"nearest"});
+    };
+    if(document.getElementById("botcheck").checked) return;
+    if(!WEB3FORMS_KEY){ showFallback(false); return; }
+    const btn = document.getElementById("submitBtn");
+    btn.disabled = true; btn.textContent = "Sending…";
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {"Content-Type":"application/json", "Accept":"application/json"},
+      body: JSON.stringify({
+        access_key: WEB3FORMS_KEY,
+        subject: subject,
+        from_name: "Home Show vendor booking page",
+        replyto: val("email"),
+        "Business name": val("biz"),
+        "Contact name": val("contact"),
+        "Phone": val("phone"),
+        "Email": val("email"),
+        "2027 Guide Book ad": guideBox.checked ? "Yes, include my business ($299 home show special, payment due Feb 26, 2027)" : "No",
+        message: summaryText
+      })
+    }).then(r=>r.json()).then(j=>{
+      if(!j || !j.success) throw new Error("not sent");
+      form.querySelectorAll(".field,.optin,.fine").forEach(el=>el.hidden = true);
+      btn.hidden = true;
+      const done = document.getElementById("done"); done.hidden = false;
+      done.scrollIntoView({behavior: reduce?"auto":"smooth", block:"nearest"});
+    }).catch(()=>{
+      btn.disabled = false; btn.textContent = "Send my renewal request";
+      showFallback(true);
+    });
+  });
+  const copyBtn = document.getElementById("copyBtn");
+  copyBtn.addEventListener("click", ()=>{
+    const done = ()=>{ copyBtn.textContent="Copied"; setTimeout(()=>copyBtn.textContent="Copy request",1800); };
+    const fallback = ()=>{ const r=document.createRange(); r.selectNodeContents(document.getElementById("summary")); const s=getSelection(); s.removeAllRanges(); s.addRange(r); copyBtn.textContent="Selected. Press copy"; };
+    try{ navigator.clipboard.writeText(summaryText).then(done, fallback); }catch(_){ fallback(); }
+  });
+
+  /* ================= Booth deadline countdown ================= */
+  (function(){
+    const due = Date.UTC(2026,11,23,22,0,0); // Wed Dec 23, 2026, 5 PM Toronto
+    const left = due - Date.now();
+    let t;
+    if(left <= 0) t = "Deadline passed";
+    else if(left < 864e5) t = "Less than a day left";
+    else { const d = Math.ceil(left/864e5); t = d + (d===1?" day":" days") + " left"; }
+    document.querySelectorAll("[data-countdown]").forEach(el=>{ el.textContent = t; el.hidden = false; });
+  })();
+
+  /* ================= Guide book ================= */
+  (function(){
+    const book = document.getElementById("book");
+    const leaves = [...book.querySelectorAll(".leaf")], N = leaves.length;
+    const LABELS = ["Cover","Pages 2–3","Pages 4–5 · Centre spread","Pages 6–7","Back cover"];
+    const FULL = [["p1"],["p2","p3"],["p45"],["p6","p7"],["p8"]];
+    const chips = [...document.querySelectorAll("#chips .chip")];
+    const status = document.getElementById("bookStatus");
+    const prevB = document.getElementById("bookPrev"), nextB = document.getElementById("bookNext");
+    let spread = 0, timer = null;
+
+    function layout(moving){
+      leaves.forEach((l,i)=>{
+        const f = i < spread;
+        l.classList.toggle("flipped", f);
+        l.style.zIndex = i===moving ? 50 : (f ? i+1 : N-i);
+      });
+      book.dataset.pos = spread===0 ? "start" : spread===N ? "end" : "mid";
+      chips.forEach((c,i)=>c.setAttribute("aria-current", i===spread ? "true" : "false"));
+      status.textContent = spread===0 ? "Tap the cover to open" : LABELS[spread] + " of 8";
+      prevB.disabled = spread===0; nextB.disabled = spread===N;
+    }
+    function go(target){
+      target = Math.max(0, Math.min(N, target));
+      clearTimeout(timer);
+      if(target===spread){ layout(-1); return; }
+      const dir = target > spread ? 1 : -1;
+      const step = ()=>{
+        const moving = dir>0 ? spread : spread-1;
+        spread += dir; layout(moving);
+        if(spread !== target) timer = setTimeout(step, reduce ? 0 : 220);
+        else timer = setTimeout(()=>layout(-1), reduce ? 0 : 900);
+      };
+      step();
+      if(!lb.hidden) fillLightbox();
+    }
+    prevB.addEventListener("click", ()=>go(spread-1));
+    nextB.addEventListener("click", ()=>go(spread+1));
+    chips.forEach((c,i)=>c.addEventListener("click", ()=>go(i)));
+
+    let downX = null, swiped = false;
+    book.addEventListener("pointerdown", e=>{ downX = e.clientX; swiped = false; });
+    book.addEventListener("pointerup", e=>{
+      if(downX===null) return;
+      const dx = e.clientX - downX; downX = null;
+      if(Math.abs(dx) > 40){ swiped = true; go(spread + (dx<0 ? 1 : -1)); }
+    });
+    book.addEventListener("click", e=>{
+      if(swiped){ swiped = false; return; }
+      const leaf = e.target.closest(".leaf");
+      if(!leaf) return;
+      go(spread + (leaf.classList.contains("flipped") ? -1 : 1));
+    });
+    book.addEventListener("keydown", e=>{
+      if(e.key==="ArrowRight"){ e.preventDefault(); go(spread+1); }
+      if(e.key==="ArrowLeft"){ e.preventDefault(); go(spread-1); }
+    });
+
+    /* Full-size reading view */
+    const lb = document.getElementById("lightbox"), lbBody = document.getElementById("lbBody");
+    function fillLightbox(){
+      document.getElementById("lbTitle").textContent = LABELS[spread];
+      lbBody.innerHTML = FULL[spread].map(p=>`<img src="guide/${p}-full.jpg" alt="${LABELS[spread]}, full size">`).join("");
+      lbBody.scrollTop = 0;
+      document.getElementById("lbPrev").disabled = spread===0;
+      document.getElementById("lbNext").disabled = spread===N;
+    }
+    let lastFocus = null;
+    document.getElementById("readBtn").addEventListener("click", ()=>{
+      lastFocus = document.activeElement; fillLightbox(); lb.hidden = false;
+      document.body.style.overflow = "hidden"; document.getElementById("lbClose").focus();
+    });
+    const closeLb = ()=>{ lb.hidden = true; document.body.style.overflow = ""; lastFocus && lastFocus.focus(); };
+    document.getElementById("lbClose").addEventListener("click", closeLb);
+    document.getElementById("lbPrev").addEventListener("click", ()=>go(spread-1));
+    document.getElementById("lbNext").addEventListener("click", ()=>go(spread+1));
+    document.addEventListener("keydown", e=>{
+      if(lb.hidden) return;
+      if(e.key==="Escape") closeLb();
+      if(e.key==="ArrowRight") go(spread+1);
+      if(e.key==="ArrowLeft") go(spread-1);
+    });
+    layout(-1);
+  })();
+
+  /* ================= Facebook ================= */
+  const fb = document.getElementById("fbLink"), soon = document.getElementById("fbSoon"), shareBtn = document.getElementById("shareBtn");
+  if(FACEBOOK_URL){ fb.href = FACEBOOK_URL; soon.hidden = true; }
+  else { fb.setAttribute("aria-disabled","true"); fb.removeAttribute("target"); fb.addEventListener("click", e=>e.preventDefault()); }
+  shareBtn.addEventListener("click", ()=>{
+    const msg = "The Northumberland Home, Garden & Leisure Show is coming to the Cobourg Community Centre, April 9-11, 2027. Hosted by myFM 93.3, Classic Rock 107.9 and 100.9 WOW FM, presented by the Ryan Huffman Real Estate Team." + (FACEBOOK_URL ? " Follow along: " + FACEBOOK_URL : "");
+    const done = ()=>{ shareBtn.textContent="Copied. Paste it anywhere"; setTimeout(()=>shareBtn.textContent="Copy a share message",2200); };
+    try{ navigator.clipboard.writeText(msg).then(done, ()=>{ shareBtn.textContent="Copy didn't work here"; }); }catch(_){ shareBtn.textContent="Copy didn't work here"; }
+  });
+})();
+</script>
+</body>
+</html>

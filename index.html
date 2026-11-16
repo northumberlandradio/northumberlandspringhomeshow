@@ -331,7 +331,7 @@ footer b{color:var(--on-navy)}
   </div>
   <div class="deadline-bar">
     <div class="wrap">
-      <b>Booth payment due Wed, Dec 23 · 5 PM</b>
+      <b>Booth payment due Tue, Jan 12 · 5 PM</b>
       <span>Full payment confirms your booth.</span>
       <span class="count" data-countdown hidden></span>
       <a href="#renew">How booking works</a>
@@ -479,11 +479,11 @@ footer b{color:var(--on-navy)}
       <ol class="steps">
         <li><b>Send the form</b><span>Tell us you'd like to renew and want booth pricing and details.</span></li>
         <li><b>Get your pricing</b><span>We'll send pricing and everything you need to know about your booth.</span></li>
-        <li><b>Pay in full by Wednesday, December 23 at 5 PM</b><span>Full payment confirms your booth.</span></li>
+        <li><b>Pay in full by Tuesday, January 12 at 5 PM</b><span>Full payment confirms your booth.</span></li>
       </ol>
       <div class="warn" role="note">
         <b>Sending the form does not reserve your booth.</b>
-        <span>If full payment isn't received by Wednesday, December 23 at 5 PM, we have the right to open your booth to our waitlist.</span>
+        <span>If full payment isn't received by Tuesday, January 12 at 5 PM, we have the right to open your booth to our waitlist.</span>
         <span class="count" data-countdown hidden></span>
       </div>
       <p class="contact-line">Requests go to Tommy at <code>tommyw@mbcmedia.ca</code></p>
@@ -515,12 +515,12 @@ footer b{color:var(--on-navy)}
         <span>Include my business in the 2027 Guide Book <span class="tag">$299</span>
           <small>Business-card size ad at the home show vendor special. Payment isn't due until February 26, 2027. Untick this box if you'd rather not.</small></span>
       </label>
-      <p class="fine">Sending this form tells us you'd like to renew and get pricing. It does not reserve your booth. Full payment by Wednesday, December 23 at 5 PM confirms it.</p>
+      <p class="fine">Sending this form tells us you'd like to renew and get pricing. It does not reserve your booth. Full payment by Tuesday, January 12 at 5 PM confirms it.</p>
       <input type="checkbox" name="botcheck" id="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
       <button class="btn" type="submit" id="submitBtn">Send my renewal request</button>
       <div class="done" id="done" role="status" hidden>
         <b>Request sent. Thank you!</b>
-        <span>Tommy will follow up with pricing and booth details. Remember, this request doesn't reserve your booth. Full payment by Wednesday, December 23 at 5 PM confirms it.</span>
+        <span>Tommy will follow up with pricing and booth details. Remember, this request doesn't reserve your booth. Full payment by Tuesday, January 12 at 5 PM confirms it.</span>
       </div>
       <div class="sent" id="sent" hidden>
         <p id="sentMsg"><b>Almost done.</b> Open your email app to send this request, or copy it into an email to <b>tommyw@mbcmedia.ca</b>.</p>
@@ -578,7 +578,7 @@ footer b{color:var(--on-navy)}
      Business category, Website). One entry per booked or held booth:
      "A07": { status:"Booked", name:"Business Name", category:"Landscaping", website:"https://..." }
      Status is "Booked" or "Held for renewal". Booths not listed are open. */
-  /* Synced from the sheet on Oct 28, 2026. Named booths marked "Open" in the sheet show as held for renewal. */
+  /* Synced from the sheet on Nov 16, 2026. Named booths marked "Open" in the sheet show as held for renewal. */
   const VENDORS = {
     "A01": {"status": "Held for renewal", "name": "Ryan Huffman Real Estate"},
     "A02": {"status": "Held for renewal", "name": "Rusco Windows and Doors"},
@@ -596,7 +596,7 @@ footer b{color:var(--on-navy)}
     "A14": {"status": "Held for renewal", "name": "Bouwman's Cabinetry"},
     "A15": {"status": "Held for renewal", "name": "Golden Tap Plumbing"},
     "A16": {"status": "Held for renewal", "name": "Mazzone Doors and Windows"},
-    "A17": {"status": "Held for renewal", "name": "Living Well HME"},
+    "A17": {"status": "Held for renewal", "name": "Living Well Home Medical Equipment"},
     "A18": {"status": "Held for renewal", "name": "Town & Country Garage Doors"},
     "A19": {"status": "Held for renewal", "name": "Mosquito Gone"},
     "A20": {"status": "Held for renewal", "name": "Ryan Huffman Real Estate"},
@@ -609,8 +609,8 @@ footer b{color:var(--on-navy)}
     "B07": {"status": "Held for renewal", "name": "Sunspace"},
     "B08": {"status": "Held for renewal", "name": "Axle Telecom"},
     "B09": {"status": "Held for renewal", "name": "Black Bottom Driveway"},
-    "B10": {"status": "Held for renewal", "name": "5th Avenue Collection"},
-    "B11": {"status": "Held for renewal", "name": "Ethic Tree Creations"},
+    "B10": {"status": "Held for renewal", "name": "Duct Wise Duct Cleaning"},
+    "B11": {"status": "Held for renewal", "name": "Santos Auto Group"},
     "B12": {"status": "Held for renewal", "name": "Jescore"},
     "B13": {"status": "Held for renewal", "name": "Bioped Cobourg"},
     "B14": {"status": "Held for renewal", "name": "One Landscape"},
@@ -621,17 +621,15 @@ footer b{color:var(--on-navy)}
     "B19": {"status": "Held for renewal", "name": "The Deck Guys"},
     "B20": {"status": "Held for renewal", "name": "Hoover's Home Energy"},
     "C01": {"status": "Held for renewal", "name": "Dickson Carpet One"},
-    "C02": {"status": "Held for renewal", "name": "Duct Wise Duct Cleaning"},
-    "C03": {"status": "Held for renewal", "name": "Birdy Talk Seed Co."},
+    "C02": {"status": "Held for renewal", "name": "Birdy Talk Seed Co."},
     "C04": {"status": "Held for renewal", "name": "Pavement Pros"},
     "C05": {"status": "Held for renewal", "name": "Ashley Packard"},
     "C06": {"status": "Held for renewal", "name": "Dulux Paints"},
     "C07": {"status": "Held for renewal", "name": "Peter Street Cabinetry"},
-    "C08": {"status": "Held for renewal", "name": "Powersource Electric"},
+    "C08": {"status": "Held for renewal", "name": "Magic Windows"},
     "C09": {"status": "Held for renewal", "name": "PTBO Waterproofing and Mold Removal"},
-    "C10": {"status": "Held for renewal", "name": "Magic Windows"},
-    "C11": {"status": "Held for renewal", "name": "Magic Windows"},
-    "C12": {"status": "Held for renewal", "name": "Double Diamond Duct Cleaning"},
+    "C10": {"status": "Held for renewal", "name": "Sylvia Poissant Mortgage Agent Level 2"},
+    "C11": {"status": "Held for renewal", "name": "Double Diamond Duct Cleaning"},
     "C13": {"status": "Held for renewal", "name": "Habitat for Humanity"},
     "C14": {"status": "Held for renewal", "name": "Lakeland Multi-Trade"},
     "C15": {"status": "Held for renewal", "name": "Durable Fence"},
@@ -642,28 +640,27 @@ footer b{color:var(--on-navy)}
     "D01": {"status": "Held for renewal", "name": "Vosburgh Home Decor"},
     "D02": {"status": "Held for renewal", "name": "Spray Net"},
     "D03": {"status": "Held for renewal", "name": "Spray Net"},
-    "D04": {"status": "Held for renewal", "name": "Bildam Home Improvements"},
-    "D05": {"status": "Held for renewal", "name": "Student Works"},
+    "D04": {"status": "Held for renewal", "name": "Student Works"},
+    "D05": {"status": "Held for renewal", "name": "Bildam Home Improvements"},
     "D06": {"status": "Held for renewal", "name": "S&O Outdoor Furniture"},
     "D07": {"status": "Held for renewal", "name": "Jay's Landscape"},
     "D08": {"status": "Held for renewal", "name": "JCK Seamless Eavestroughs"},
-    "D09": {"status": "Held for renewal", "name": "Mazdak Leisure"},
     "D10": {"status": "Held for renewal", "name": "Mazdak Leisure"},
     "D11": {"status": "Held for renewal", "name": "Mazdak Leisure"},
-    "D12": {"status": "Held for renewal", "name": "Mazdak Leisure"},
-    "D13": {"status": "Held for renewal", "name": "Green Crew Contracting"},
     "D14": {"status": "Held for renewal", "name": "Postech Piers Northumberland"},
     "D15": {"status": "Held for renewal", "name": "Infiniti Home Comfort"},
     "D16": {"status": "Held for renewal", "name": "Infiniti Home Comfort"},
-    "D17": {"status": "Held for renewal", "name": "Sylvia Poissant"},
     "D18": {"status": "Held for renewal", "name": "Homestead Oxygen Equipment"},
     "D19": {"status": "Held for renewal", "name": "Homestead Oxygen Equipment"},
     "D20": {"status": "Held for renewal", "name": "Vosburgh Home Decor"},
+    "E01": {"status": "Held for renewal", "name": "Green Crew Contracting"},
     "E02": {"status": "Held for renewal", "name": "Mercer's Softwash and Power Clean"},
     "E03": {"status": "Held for renewal", "name": "Creative Metal Works"},
     "E04": {"status": "Held for renewal", "name": "Crime Stoppers Peterborough Northumberland"},
     "E05": {"status": "Held for renewal", "name": "Fresh Start Cleaning Northumberland"},
     "E06": {"status": "Held for renewal", "name": "Mallory Rose Design"},
+    "E07": {"status": "Held for renewal", "name": "5th Avenue Jewellery"},
+    "E08": {"status": "Held for renewal", "name": "Ethic Tree Creations"},
     "E09": {"status": "Held for renewal", "name": "Make It Rock"},
     "E10": {"status": "Held for renewal", "name": "Make It Rock"}
   };
@@ -671,7 +668,7 @@ footer b{color:var(--on-navy)}
   /* Web3Forms access key (free at web3forms.com, created with tommyw@mbcmedia.ca).
      Paste it between the quotes to send renewal requests automatically.
      Left empty, the form falls back to "open in email app / copy". */
-  const WEB3FORMS_KEY = "01a73230-129c-40ea-9193-bf8666cdd0bb";
+  const WEB3FORMS_KEY = "";
 
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
@@ -1291,8 +1288,8 @@ footer b{color:var(--on-navy)}
     const g = groupOf[id];
     const faces = g ? [...new Set(g.ids.map(i=>byId[i].face))] : [b.face];
     body += `<dl class="kv">${g?`<dt>Space</dt><dd>${g.size}</dd>`:""}<dt>Room</dt><dd>Gymnasium</dd><dt>Faces</dt><dd>${faces.length>1?"West and east aisles":faces[0]==="w"?"West aisle":"East aisle"}</dd><dt>Power</dt><dd>Included</dd></dl>`;
-    if(st==="open") body += `<p class="muted" style="margin-top:14px">This booth is open. Mention ${id} on the renewal form. Full payment by Wednesday, December 23 at 5 PM confirms a booth.</p><a class="btn" href="#renew" style="margin-top:12px;width:100%">Renew my booth</a>`;
-    else if(st==="hold") body += `<p class="muted" style="margin-top:14px">Held for a returning vendor. Full payment by Wednesday, December 23 at 5 PM confirms it. Unpaid booths may be opened to our waitlist.</p><a class="btn" href="#renew" style="margin-top:12px;width:100%">Renew my booth</a>`;
+    if(st==="open") body += `<p class="muted" style="margin-top:14px">This booth is open. Mention ${id} on the renewal form. Full payment by Tuesday, January 12 at 5 PM confirms a booth.</p><a class="btn" href="#renew" style="margin-top:12px;width:100%">Renew my booth</a>`;
+    else if(st==="hold") body += `<p class="muted" style="margin-top:14px">Held for a returning vendor. Full payment by Tuesday, January 12 at 5 PM confirms it. Unpaid booths may be opened to our waitlist.</p><a class="btn" href="#renew" style="margin-top:12px;width:100%">Renew my booth</a>`;
     else body += `<p class="muted" style="margin-top:14px">This booth is taken. Pick an open green booth instead.</p>`;
     body += `<button class="btn ghost" id="clearSel" style="margin-top:8px;width:100%;border-color:var(--line);color:var(--muted)">Back to overview</button>`;
     panel.innerHTML = body;
@@ -1359,7 +1356,7 @@ Email: ${val("email")}
 I'd like to renew my booth and get more information, including pricing.
 2027 Guide Book ad: ${guideBox.checked ? "Yes, include my business (business-card size, $299 home show special, payment due Feb 26, 2027)" : "No, not this year"}
 
-I understand this request does not reserve my booth. Full payment by Wednesday, December 23 at 5 PM confirms it.`;
+I understand this request does not reserve my booth. Full payment by Tuesday, January 12 at 5 PM confirms it.`;
     document.getElementById("summary").textContent = summaryText;
     const subject = `Booth renewal: ${val("biz")} - Northumberland Home, Garden & Leisure Show 2027`;
     document.getElementById("mailLink").href = `mailto:${ADDR}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(summaryText)}`;
@@ -1407,7 +1404,7 @@ I understand this request does not reserve my booth. Full payment by Wednesday, 
 
   /* ================= Booth deadline countdown ================= */
   (function(){
-    const due = Date.UTC(2026,11,23,22,0,0); // Wed Dec 23, 2026, 5 PM Toronto
+    const due = Date.UTC(2027,0,12,22,0,0); // Tue Jan 12, 2027, 5 PM Toronto
     const left = due - Date.now();
     let t;
     if(left <= 0) t = "Deadline passed";
